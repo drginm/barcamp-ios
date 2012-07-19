@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33A915B89835004064D9 /* UIKit.framework */; };
+		259B33AC15B89835004064D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AB15B89835004064D9 /* Foundation.framework */; };
+		259B33AE15B89835004064D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AD15B89835004064D9 /* CoreGraphics.framework */; };
+		259B33B415B89835004064D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 259B33B215B89835004064D9 /* InfoPlist.strings */; };
+		259B33B615B89836004064D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33B515B89836004064D9 /* main.m */; };
+		259B33BA15B89836004064D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33B915B89836004064D9 /* AppDelegate.m */; };
+		259B33BD15B89836004064D9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259B33BB15B89836004064D9 /* MainStoryboard.storyboard */; };
+		259B33C015B89836004064D9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33BF15B89836004064D9 /* FirstViewController.m */; };
+		259B33C215B89836004064D9 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33C115B89836004064D9 /* first.png */; };
+		259B33C415B89836004064D9 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33C315B89836004064D9 /* first@2x.png */; };
+		259B33C715B89836004064D9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33C615B89836004064D9 /* SecondViewController.m */; };
+		259B33C915B89836004064D9 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33C815B89836004064D9 /* second.png */; };
+		259B33CB15B89836004064D9 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33CA15B89836004064D9 /* second@2x.png */; };
+		259B33E015B8A2B9004064D9 /* IGRoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */; };
+		259B33E615B8A681004064D9 /* IGBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33E515B8A681004064D9 /* IGBackend.m */; };
+		259B33E915B8AA15004064D9 /* IGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33E815B8AA15004064D9 /* IGDatabase.m */; };
+		259B33EC15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 259B33EA15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld */; };
+		259B33F215B8AF3A004064D9 /* Unconference.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33F115B8AF3A004064D9 /* Unconference.m */; };
+		259B33FD15B8B436004064D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33FC15B8B436004064D9 /* Default.png */; };
+		259B33FF15B8B43A004064D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33FE15B8B43A004064D9 /* Default@2x.png */; };
+		259B340315B8B56A004064D9 /* DictionaryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B340215B8B54D004064D9 /* DictionaryHelper.m */; };
+		259B340515B8B620004064D9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B340415B8B620004064D9 /* CoreData.framework */; };
+		259B340915B8B772004064D9 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B340815B8B772004064D9 /* Place.m */; };
+		259B341815B8C45D004064D9 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B340E15B8C45C004064D9 /* Icon-72.png */; };
+		259B341915B8C45D004064D9 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B340F15B8C45C004064D9 /* Icon-72@2x.png */; };
+		259B341A15B8C45D004064D9 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341015B8C45C004064D9 /* Icon-Small-50.png */; };
+		259B341B15B8C45D004064D9 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341115B8C45C004064D9 /* Icon-Small-50@2x.png */; };
+		259B341C15B8C45D004064D9 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341215B8C45C004064D9 /* Icon-Small.png */; };
+		259B341D15B8C45D004064D9 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341315B8C45D004064D9 /* iTunesArtwork.png */; };
+		259B341E15B8C45D004064D9 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341415B8C45D004064D9 /* Icon-Small@2x.png */; };
+		259B341F15B8C45D004064D9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341515B8C45D004064D9 /* Icon.png */; };
+		259B342015B8C45D004064D9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341615B8C45D004064D9 /* Icon@2x.png */; };
+		259B342115B8C45D004064D9 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */; };
+		259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		259B33A515B89835004064D9 /* barcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		259B33A915B89835004064D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		259B33AB15B89835004064D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		259B33AD15B89835004064D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		259B33B115B89835004064D9 /* barcamp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "barcamp-Info.plist"; sourceTree = "<group>"; };
+		259B33B315B89835004064D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		259B33B515B89836004064D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		259B33B715B89836004064D9 /* barcamp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "barcamp-Prefix.pch"; sourceTree = "<group>"; };
+		259B33B815B89836004064D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		259B33B915B89836004064D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		259B33BC15B89836004064D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		259B33BE15B89836004064D9 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		259B33BF15B89836004064D9 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		259B33C115B89836004064D9 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		259B33C315B89836004064D9 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		259B33C515B89836004064D9 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		259B33C615B89836004064D9 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		259B33C815B89836004064D9 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		259B33CA15B89836004064D9 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		259B33DE15B8A2B9004064D9 /* IGRoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGRoomsViewController.h; path = class/IGRoomsViewController.h; sourceTree = "<group>"; };
+		259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGRoomsViewController.m; path = class/IGRoomsViewController.m; sourceTree = "<group>"; };
+		259B33E115B8A3A4004064D9 /* IGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGConstants.h; path = class/IGConstants.h; sourceTree = "<group>"; };
+		259B33E415B8A681004064D9 /* IGBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGBackend.h; path = class/IGBackend.h; sourceTree = "<group>"; };
+		259B33E515B8A681004064D9 /* IGBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGBackend.m; path = class/IGBackend.m; sourceTree = "<group>"; };
+		259B33E715B8AA15004064D9 /* IGDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGDatabase.h; path = class/IGDatabase.h; sourceTree = "<group>"; };
+		259B33E815B8AA15004064D9 /* IGDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGDatabase.m; path = class/IGDatabase.m; sourceTree = "<group>"; };
+		259B33EB15B8AA41004064D9 /* IGBarcampModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IGBarcampModel.xcdatamodel; sourceTree = "<group>"; };
+		259B33F015B8AF3A004064D9 /* Unconference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unconference.h; path = class/Unconference.h; sourceTree = "<group>"; };
+		259B33F115B8AF3A004064D9 /* Unconference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Unconference.m; path = class/Unconference.m; sourceTree = "<group>"; };
+		259B33FC15B8B436004064D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		259B33FE15B8B43A004064D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		259B340115B8B54D004064D9 /* DictionaryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryHelper.h; sourceTree = "<group>"; };
+		259B340215B8B54D004064D9 /* DictionaryHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryHelper.m; sourceTree = "<group>"; };
+		259B340415B8B620004064D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		259B340715B8B772004064D9 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		259B340815B8B772004064D9 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		259B340E15B8C45C004064D9 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		259B340F15B8C45C004064D9 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		259B341015B8C45C004064D9 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		259B341115B8C45C004064D9 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		259B341215B8C45C004064D9 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		259B341315B8C45D004064D9 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		259B341415B8C45D004064D9 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		259B341515B8C45D004064D9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		259B341615B8C45D004064D9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGUnconferencesViewController.h; path = class/IGUnconferencesViewController.h; sourceTree = "<group>"; };
+		259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGUnconferencesViewController.m; path = class/IGUnconferencesViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		259B33A215B89835004064D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259B340515B8B620004064D9 /* CoreData.framework in Frameworks */,
+				259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */,
+				259B33AC15B89835004064D9 /* Foundation.framework in Frameworks */,
+				259B33AE15B89835004064D9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		259B339A15B89834004064D9 = {
+			isa = PBXGroup;
+			children = (
+				259B340E15B8C45C004064D9 /* Icon-72.png */,
+				259B340F15B8C45C004064D9 /* Icon-72@2x.png */,
+				259B341015B8C45C004064D9 /* Icon-Small-50.png */,
+				259B341115B8C45C004064D9 /* Icon-Small-50@2x.png */,
+				259B341215B8C45C004064D9 /* Icon-Small.png */,
+				259B341315B8C45D004064D9 /* iTunesArtwork.png */,
+				259B341415B8C45D004064D9 /* Icon-Small@2x.png */,
+				259B341515B8C45D004064D9 /* Icon.png */,
+				259B341615B8C45D004064D9 /* Icon@2x.png */,
+				259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */,
+				259B33FE15B8B43A004064D9 /* Default@2x.png */,
+				259B33FC15B8B436004064D9 /* Default.png */,
+				259B33AF15B89835004064D9 /* barcamp */,
+				259B33A815B89835004064D9 /* Frameworks */,
+				259B33A615B89835004064D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		259B33A615B89835004064D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259B33A515B89835004064D9 /* barcamp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		259B33A815B89835004064D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				259B340415B8B620004064D9 /* CoreData.framework */,
+				259B33A915B89835004064D9 /* UIKit.framework */,
+				259B33AB15B89835004064D9 /* Foundation.framework */,
+				259B33AD15B89835004064D9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		259B33AF15B89835004064D9 /* barcamp */ = {
+			isa = PBXGroup;
+			children = (
+				259B340615B8B74B004064D9 /* model */,
+				259B340015B8B53E004064D9 /* utilities */,
+				259B33D115B89872004064D9 /* resources */,
+				259B33B815B89836004064D9 /* AppDelegate.h */,
+				259B33B915B89836004064D9 /* AppDelegate.m */,
+				259B33BB15B89836004064D9 /* MainStoryboard.storyboard */,
+				259B33BE15B89836004064D9 /* FirstViewController.h */,
+				259B33BF15B89836004064D9 /* FirstViewController.m */,
+				259B33C515B89836004064D9 /* SecondViewController.h */,
+				259B33C615B89836004064D9 /* SecondViewController.m */,
+				259B33B015B89835004064D9 /* Supporting Files */,
+				259B33E115B8A3A4004064D9 /* IGConstants.h */,
+				259B33DE15B8A2B9004064D9 /* IGRoomsViewController.h */,
+				259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */,
+				259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */,
+				259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */,
+				259B33E415B8A681004064D9 /* IGBackend.h */,
+				259B33E515B8A681004064D9 /* IGBackend.m */,
+				259B33E715B8AA15004064D9 /* IGDatabase.h */,
+				259B33E815B8AA15004064D9 /* IGDatabase.m */,
+			);
+			path = barcamp;
+			sourceTree = "<group>";
+		};
+		259B33B015B89835004064D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				259B33B115B89835004064D9 /* barcamp-Info.plist */,
+				259B33B215B89835004064D9 /* InfoPlist.strings */,
+				259B33B515B89836004064D9 /* main.m */,
+				259B33B715B89836004064D9 /* barcamp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		259B33D115B89872004064D9 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				259B33D215B89881004064D9 /* img */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		259B33D215B89881004064D9 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				259B33C115B89836004064D9 /* first.png */,
+				259B33C315B89836004064D9 /* first@2x.png */,
+				259B33C815B89836004064D9 /* second.png */,
+				259B33CA15B89836004064D9 /* second@2x.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		259B340015B8B53E004064D9 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				259B340115B8B54D004064D9 /* DictionaryHelper.h */,
+				259B340215B8B54D004064D9 /* DictionaryHelper.m */,
+			);
+			name = utilities;
+			sourceTree = "<group>";
+		};
+		259B340615B8B74B004064D9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				259B33EA15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld */,
+				259B340715B8B772004064D9 /* Place.h */,
+				259B340815B8B772004064D9 /* Place.m */,
+				259B33F115B8AF3A004064D9 /* Unconference.m */,
+				259B33F015B8AF3A004064D9 /* Unconference.h */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		259B33A415B89835004064D9 /* barcamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259B33CE15B89836004064D9 /* Build configuration list for PBXNativeTarget "barcamp" */;
+			buildPhases = (
+				259B33A115B89835004064D9 /* Sources */,
+				259B33A215B89835004064D9 /* Frameworks */,
+				259B33A315B89835004064D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = barcamp;
+			productName = barcamp;
+			productReference = 259B33A515B89835004064D9 /* barcamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		259B339C15B89834004064D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = IGApps;
+			};
+			buildConfigurationList = 259B339F15B89834004064D9 /* Build configuration list for PBXProject "barcamp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 259B339A15B89834004064D9;
+			productRefGroup = 259B33A615B89835004064D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				259B33A415B89835004064D9 /* barcamp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		259B33A315B89835004064D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259B33B415B89835004064D9 /* InfoPlist.strings in Resources */,
+				259B33BD15B89836004064D9 /* MainStoryboard.storyboard in Resources */,
+				259B33C215B89836004064D9 /* first.png in Resources */,
+				259B33C415B89836004064D9 /* first@2x.png in Resources */,
+				259B33C915B89836004064D9 /* second.png in Resources */,
+				259B33CB15B89836004064D9 /* second@2x.png in Resources */,
+				259B33FD15B8B436004064D9 /* Default.png in Resources */,
+				259B33FF15B8B43A004064D9 /* Default@2x.png in Resources */,
+				259B341815B8C45D004064D9 /* Icon-72.png in Resources */,
+				259B341915B8C45D004064D9 /* Icon-72@2x.png in Resources */,
+				259B341A15B8C45D004064D9 /* Icon-Small-50.png in Resources */,
+				259B341B15B8C45D004064D9 /* Icon-Small-50@2x.png in Resources */,
+				259B341C15B8C45D004064D9 /* Icon-Small.png in Resources */,
+				259B341D15B8C45D004064D9 /* iTunesArtwork.png in Resources */,
+				259B341E15B8C45D004064D9 /* Icon-Small@2x.png in Resources */,
+				259B341F15B8C45D004064D9 /* Icon.png in Resources */,
+				259B342015B8C45D004064D9 /* Icon@2x.png in Resources */,
+				259B342115B8C45D004064D9 /* iTunesArtwork@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		259B33A115B89835004064D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259B340315B8B56A004064D9 /* DictionaryHelper.m in Sources */,
+				259B33B615B89836004064D9 /* main.m in Sources */,
+				259B33BA15B89836004064D9 /* AppDelegate.m in Sources */,
+				259B33C015B89836004064D9 /* FirstViewController.m in Sources */,
+				259B33C715B89836004064D9 /* SecondViewController.m in Sources */,
+				259B33E015B8A2B9004064D9 /* IGRoomsViewController.m in Sources */,
+				259B33E615B8A681004064D9 /* IGBackend.m in Sources */,
+				259B33E915B8AA15004064D9 /* IGDatabase.m in Sources */,
+				259B33EC15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld in Sources */,
+				259B33F215B8AF3A004064D9 /* Unconference.m in Sources */,
+				259B340915B8B772004064D9 /* Place.m in Sources */,
+				259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		259B33B215B89835004064D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				259B33B315B89835004064D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		259B33BB15B89836004064D9 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				259B33BC15B89836004064D9 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		259B33CC15B89836004064D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		259B33CD15B89836004064D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		259B33CF15B89836004064D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "barcamp/barcamp-Prefix.pch";
+				INFOPLIST_FILE = "barcamp/barcamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		259B33D015B89836004064D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "barcamp/barcamp-Prefix.pch";
+				INFOPLIST_FILE = "barcamp/barcamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		259B339F15B89834004064D9 /* Build configuration list for PBXProject "barcamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259B33CC15B89836004064D9 /* Debug */,
+				259B33CD15B89836004064D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		259B33CE15B89836004064D9 /* Build configuration list for PBXNativeTarget "barcamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259B33CF15B89836004064D9 /* Debug */,
+				259B33D015B89836004064D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		259B33EA15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				259B33EB15B8AA41004064D9 /* IGBarcampModel.xcdatamodel */,
+			);
+			currentVersion = 259B33EB15B8AA41004064D9 /* IGBarcampModel.xcdatamodel */;
+			path = IGBarcampModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 259B339C15B89834004064D9 /* Project object */;
+}
