@@ -7,12 +7,16 @@
 //
 
 #import "IGUnconferencesViewController.h"
+#import "IGDatabase.h"
+#import "Unconference.h"
 
 @interface IGUnconferencesViewController ()
 
 @end
 
 @implementation IGUnconferencesViewController
+
+@synthesize selPlace;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +36,12 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[IGDatabase sharedDatabase] getUnconfForPlace:selPlace];
 }
 
 - (void)viewDidUnload
@@ -50,16 +60,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [allUnconfs count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,7 +75,12 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    
+    cell.textLabel.text = [(Unconference *)[allUnconfs objectAtIndex:indexPath.row] name];
     
     return cell;
 }

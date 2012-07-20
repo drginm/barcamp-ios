@@ -71,9 +71,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="Sgl-Vg-gxN" kind="push" identifier="unconferenceSegue" id="ky1-d6-QJe"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -83,6 +80,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Salas" id="EvV-Aa-qn9"/>
                     <navigationItem key="navigationItem" id="coP-Bu-KA7"/>
+                    <connections>
+                        <segue destination="Sgl-Vg-gxN" kind="push" identifier="unconferenceSegue" id="yJJ-fo-KIS"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="828" y="180"/>
@@ -106,14 +106,6 @@
             <point key="canvasLocation" x="-200" y="180"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="IGRoomsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRoomsViewController.h"/>
-        </class>
-        <class className="IGUnconferencesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGUnconferencesViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

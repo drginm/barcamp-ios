@@ -47,6 +47,19 @@
     return results;
 }
 
+-(NSArray *)getArrayOfModel:(NSString *) model AndPredicate:(NSPredicate *) predicate{
+    NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:model inManagedObjectContext:context];
+    [request setEntity:description];
+    NSError *error;
+    
+    [request setPredicate:predicate];    
+    NSArray *results = [context executeFetchRequest:request error:&error];
+    
+    return results;
+}
+
 -(id)getObjectFromModel:(NSString *)model WithId:(NSNumber *)identifier{
     NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -62,7 +75,7 @@
     return (results && [results count] > 0)?[results objectAtIndex:0]:nil;
 }
 
-#pragma mark - Products
+#pragma mark - Places
 -(void)updateLocalPlaces:(NSArray *)places{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
@@ -102,6 +115,7 @@
     
 }
 
+#pragma mark - Unconferences
 -(void)updateLocalUnconferences:(NSArray *)unconferences{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
@@ -166,6 +180,12 @@
         }
     }
     
+}
+
+- (NSArray *)getUnconfForPlace:(Place *) place{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@", place.identifier];
+    NSArray *unconfs = [self getArrayOfModel:@"Unconference" AndPredicate:predicate];
+    return unconfs;
 }
 
 @end

@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class IGUnconferencesViewController;
+@class Place;
+
 @interface IGRoomsViewController : UITableViewController{
     NSArray *allPlaces;
+    Place *selectedPlace;
+    
+    @private
+    IGUnconferencesViewController *unconfVC;
+    
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "IGRoomsViewController.h"
+#import "IGUnconferencesViewController.h"
 #import "IGDatabase.h"
 #import "Place.h"
 
@@ -48,6 +49,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     allPlaces = [[IGDatabase sharedDatabase] getModelAsArray:@"Place"];
 }
 
@@ -121,13 +123,29 @@
 }
 */
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"unconferenceSegue"]){
+        unconfVC = [segue destinationViewController];
+        [unconfVC setSelPlace:selectedPlace];
+    }
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
+    
+//    if(unconfVC == nil){
+//        unconfVC = [IGUnconferencesViewController alloc] init
+//    }
+    
+    selectedPlace = [allPlaces objectAtIndex:indexPath.row];
+    
+    [self performSegueWithIdentifier:@"unconferenceSegue" sender:self];
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];

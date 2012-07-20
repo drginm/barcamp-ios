@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IGUnconferencesViewController : UITableViewController
+@class Place;
+
+@interface IGUnconferencesViewController : UITableViewController{
+    NSArray *allUnconfs;
+}
+
+@property (strong) Place *selPlace;
 
 @end

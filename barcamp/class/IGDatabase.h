@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class Place;
 @interface IGDatabase : NSObject
 
 +(IGDatabase *)sharedDatabase;
 
 -(NSArray *)getModelAsArray:(NSString *) model;
 -(id)getObjectFromModel:(NSString *)model WithId:(NSNumber *)identifier;
+
+#pragma mark - Places
 -(void)updateLocalPlaces:(NSArray *)params;
+
+#pragma mark - Unconferences
 -(void)updateLocalUnconferences:(NSArray *)unconferences;
+- (NSArray *)getUnconfForPlace:(Place *) place;
 @end
