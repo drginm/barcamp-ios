@@ -10,7 +10,7 @@
 #import "Unconference.h"
 #import "Place.h"
 #import "UILabel+ESAdjustableLabel.h"
-#import <Twitter/Twitter.h>
+
 
 @interface IGDetailViewController ()
 
