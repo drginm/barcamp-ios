@@ -14,12 +14,6 @@
 		259B33B615B89836004064D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33B515B89836004064D9 /* main.m */; };
 		259B33BA15B89836004064D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33B915B89836004064D9 /* AppDelegate.m */; };
 		259B33BD15B89836004064D9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259B33BB15B89836004064D9 /* MainStoryboard.storyboard */; };
-		259B33C015B89836004064D9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33BF15B89836004064D9 /* FirstViewController.m */; };
-		259B33C215B89836004064D9 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33C115B89836004064D9 /* first.png */; };
-		259B33C415B89836004064D9 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33C315B89836004064D9 /* first@2x.png */; };
-		259B33C715B89836004064D9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33C615B89836004064D9 /* SecondViewController.m */; };
-		259B33C915B89836004064D9 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33C815B89836004064D9 /* second.png */; };
-		259B33CB15B89836004064D9 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33CA15B89836004064D9 /* second@2x.png */; };
 		259B33E015B8A2B9004064D9 /* IGRoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */; };
 		259B33E615B8A681004064D9 /* IGBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33E515B8A681004064D9 /* IGBackend.m */; };
 		259B33E915B8AA15004064D9 /* IGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33E815B8AA15004064D9 /* IGDatabase.m */; };
@@ -41,6 +35,18 @@
 		259B342015B8C45D004064D9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341615B8C45D004064D9 /* Icon@2x.png */; };
 		259B342115B8C45D004064D9 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */; };
 		259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */; };
+		46BA367515BAF5ED0058F9BB /* 1-heart-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */; };
+		46BA367615BAF5ED0058F9BB /* 1-heart-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */; };
+		46BA367715BAF5ED0058F9BB /* 2-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */; };
+		46BA367815BAF5ED0058F9BB /* 2-twitterbird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366C15BAF5ED0058F9BB /* 2-twitterbird@2x.png */; };
+		46BA367915BAF5ED0058F9BB /* 3-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366D15BAF5ED0058F9BB /* 3-list.png */; };
+		46BA367A15BAF5ED0058F9BB /* 3-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366E15BAF5ED0058F9BB /* 3-list@2x.png */; };
+		46BA367B15BAF5ED0058F9BB /* 4-news.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366F15BAF5ED0058F9BB /* 4-news.png */; };
+		46BA367C15BAF5ED0058F9BB /* 4-news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367015BAF5ED0058F9BB /* 4-news@2x.png */; };
+		46BA367D15BAF5ED0058F9BB /* 5-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367115BAF5ED0058F9BB /* 5-info.png */; };
+		46BA367E15BAF5ED0058F9BB /* 5-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367215BAF5ED0058F9BB /* 5-info@2x.png */; };
+		46BA367F15BAF5ED0058F9BB /* 6-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367315BAF5ED0058F9BB /* 6-heart.png */; };
+		46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,14 +61,6 @@
 		259B33B815B89836004064D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		259B33B915B89836004064D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		259B33BC15B89836004064D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		259B33BE15B89836004064D9 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		259B33BF15B89836004064D9 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		259B33C115B89836004064D9 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		259B33C315B89836004064D9 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		259B33C515B89836004064D9 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		259B33C615B89836004064D9 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		259B33C815B89836004064D9 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		259B33CA15B89836004064D9 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		259B33DE15B8A2B9004064D9 /* IGRoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGRoomsViewController.h; path = class/IGRoomsViewController.h; sourceTree = "<group>"; };
 		259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGRoomsViewController.m; path = class/IGRoomsViewController.m; sourceTree = "<group>"; };
 		259B33E115B8A3A4004064D9 /* IGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGConstants.h; path = class/IGConstants.h; sourceTree = "<group>"; };
@@ -92,6 +90,18 @@
 		259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGUnconferencesViewController.h; path = class/IGUnconferencesViewController.h; sourceTree = "<group>"; };
 		259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGUnconferencesViewController.m; path = class/IGUnconferencesViewController.m; sourceTree = "<group>"; };
+		46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill.png"; sourceTree = "<group>"; };
+		46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill@2x.png"; sourceTree = "<group>"; };
+		46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-twitterbird.png"; sourceTree = "<group>"; };
+		46BA366C15BAF5ED0058F9BB /* 2-twitterbird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-twitterbird@2x.png"; sourceTree = "<group>"; };
+		46BA366D15BAF5ED0058F9BB /* 3-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-list.png"; sourceTree = "<group>"; };
+		46BA366E15BAF5ED0058F9BB /* 3-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-list@2x.png"; sourceTree = "<group>"; };
+		46BA366F15BAF5ED0058F9BB /* 4-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-news.png"; sourceTree = "<group>"; };
+		46BA367015BAF5ED0058F9BB /* 4-news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-news@2x.png"; sourceTree = "<group>"; };
+		46BA367115BAF5ED0058F9BB /* 5-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5-info.png"; sourceTree = "<group>"; };
+		46BA367215BAF5ED0058F9BB /* 5-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5-info@2x.png"; sourceTree = "<group>"; };
+		46BA367315BAF5ED0058F9BB /* 6-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart.png"; sourceTree = "<group>"; };
+		46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,10 +168,6 @@
 				259B33B815B89836004064D9 /* AppDelegate.h */,
 				259B33B915B89836004064D9 /* AppDelegate.m */,
 				259B33BB15B89836004064D9 /* MainStoryboard.storyboard */,
-				259B33BE15B89836004064D9 /* FirstViewController.h */,
-				259B33BF15B89836004064D9 /* FirstViewController.m */,
-				259B33C515B89836004064D9 /* SecondViewController.h */,
-				259B33C615B89836004064D9 /* SecondViewController.m */,
 				259B33B015B89835004064D9 /* Supporting Files */,
 				259B33E115B8A3A4004064D9 /* IGConstants.h */,
 				259B33DE15B8A2B9004064D9 /* IGRoomsViewController.h */,
@@ -198,10 +204,18 @@
 		259B33D215B89881004064D9 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				259B33C115B89836004064D9 /* first.png */,
-				259B33C315B89836004064D9 /* first@2x.png */,
-				259B33C815B89836004064D9 /* second.png */,
-				259B33CA15B89836004064D9 /* second@2x.png */,
+				46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */,
+				46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */,
+				46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */,
+				46BA366C15BAF5ED0058F9BB /* 2-twitterbird@2x.png */,
+				46BA366D15BAF5ED0058F9BB /* 3-list.png */,
+				46BA366E15BAF5ED0058F9BB /* 3-list@2x.png */,
+				46BA366F15BAF5ED0058F9BB /* 4-news.png */,
+				46BA367015BAF5ED0058F9BB /* 4-news@2x.png */,
+				46BA367115BAF5ED0058F9BB /* 5-info.png */,
+				46BA367215BAF5ED0058F9BB /* 5-info@2x.png */,
+				46BA367315BAF5ED0058F9BB /* 6-heart.png */,
+				46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -280,10 +294,6 @@
 			files = (
 				259B33B415B89835004064D9 /* InfoPlist.strings in Resources */,
 				259B33BD15B89836004064D9 /* MainStoryboard.storyboard in Resources */,
-				259B33C215B89836004064D9 /* first.png in Resources */,
-				259B33C415B89836004064D9 /* first@2x.png in Resources */,
-				259B33C915B89836004064D9 /* second.png in Resources */,
-				259B33CB15B89836004064D9 /* second@2x.png in Resources */,
 				259B33FD15B8B436004064D9 /* Default.png in Resources */,
 				259B33FF15B8B43A004064D9 /* Default@2x.png in Resources */,
 				259B341815B8C45D004064D9 /* Icon-72.png in Resources */,
@@ -296,6 +306,18 @@
 				259B341F15B8C45D004064D9 /* Icon.png in Resources */,
 				259B342015B8C45D004064D9 /* Icon@2x.png in Resources */,
 				259B342115B8C45D004064D9 /* iTunesArtwork@2x.png in Resources */,
+				46BA367515BAF5ED0058F9BB /* 1-heart-fill.png in Resources */,
+				46BA367615BAF5ED0058F9BB /* 1-heart-fill@2x.png in Resources */,
+				46BA367715BAF5ED0058F9BB /* 2-twitterbird.png in Resources */,
+				46BA367815BAF5ED0058F9BB /* 2-twitterbird@2x.png in Resources */,
+				46BA367915BAF5ED0058F9BB /* 3-list.png in Resources */,
+				46BA367A15BAF5ED0058F9BB /* 3-list@2x.png in Resources */,
+				46BA367B15BAF5ED0058F9BB /* 4-news.png in Resources */,
+				46BA367C15BAF5ED0058F9BB /* 4-news@2x.png in Resources */,
+				46BA367D15BAF5ED0058F9BB /* 5-info.png in Resources */,
+				46BA367E15BAF5ED0058F9BB /* 5-info@2x.png in Resources */,
+				46BA367F15BAF5ED0058F9BB /* 6-heart.png in Resources */,
+				46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +331,6 @@
 				259B340315B8B56A004064D9 /* DictionaryHelper.m in Sources */,
 				259B33B615B89836004064D9 /* main.m in Sources */,
 				259B33BA15B89836004064D9 /* AppDelegate.m in Sources */,
-				259B33C015B89836004064D9 /* FirstViewController.m in Sources */,
-				259B33C715B89836004064D9 /* SecondViewController.m in Sources */,
 				259B33E015B8A2B9004064D9 /* IGRoomsViewController.m in Sources */,
 				259B33E615B8A681004064D9 /* IGBackend.m in Sources */,
 				259B33E915B8AA15004064D9 /* IGDatabase.m in Sources */,
@@ -429,6 +449,7 @@
 				259B33D015B89836004064D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
