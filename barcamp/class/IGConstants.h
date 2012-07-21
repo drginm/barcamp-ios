@@ -15,6 +15,9 @@
 #define PLACES_KEY @"places"
 #define UNCONFERENCES_KEY @"unconferences"
 
+#define BARCAMP_URL @"http://barcampmedellin.org/"
+#define BARCAMP_TWITTER @"@barcamp_med"
+
 #endif
 
 @interface IGConstants : NSObject

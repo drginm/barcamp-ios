@@ -35,9 +35,11 @@
 		259B342015B8C45D004064D9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341615B8C45D004064D9 /* Icon@2x.png */; };
 		259B342115B8C45D004064D9 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */; };
 		259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */; };
-<<<<<<< HEAD
 		259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B342C15BAF4F9004064D9 /* IGDetailViewController.m */; };
-=======
+		259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B343415BB1169004064D9 /* UILabel+ESAdjustableLabel.m */; };
+		259B343B15BB1402004064D9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B343A15BB1402004064D9 /* Twitter.framework */; };
+		259B343E15BB1781004064D9 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B343C15BB1781004064D9 /* twitter@2x.png */; };
+		259B343F15BB1781004064D9 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B343D15BB1781004064D9 /* twitter.png */; };
 		46BA367515BAF5ED0058F9BB /* 1-heart-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */; };
 		46BA367615BAF5ED0058F9BB /* 1-heart-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */; };
 		46BA367715BAF5ED0058F9BB /* 2-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */; };
@@ -50,7 +52,6 @@
 		46BA367E15BAF5ED0058F9BB /* 5-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367215BAF5ED0058F9BB /* 5-info@2x.png */; };
 		46BA367F15BAF5ED0058F9BB /* 6-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367315BAF5ED0058F9BB /* 6-heart.png */; };
 		46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */; };
->>>>>>> 4ca62ff69a78b09cb87bd5a0b734ffecb43996c4
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,10 +95,13 @@
 		259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGUnconferencesViewController.h; path = class/IGUnconferencesViewController.h; sourceTree = "<group>"; };
 		259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGUnconferencesViewController.m; path = class/IGUnconferencesViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		259B342B15BAF4F9004064D9 /* IGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGDetailViewController.h; path = class/IGDetailViewController.h; sourceTree = "<group>"; };
 		259B342C15BAF4F9004064D9 /* IGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGDetailViewController.m; path = class/IGDetailViewController.m; sourceTree = "<group>"; };
-=======
+		259B343315BB1169004064D9 /* UILabel+ESAdjustableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ESAdjustableLabel.h"; sourceTree = "<group>"; };
+		259B343415BB1169004064D9 /* UILabel+ESAdjustableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ESAdjustableLabel.m"; sourceTree = "<group>"; };
+		259B343A15BB1402004064D9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		259B343C15BB1781004064D9 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		259B343D15BB1781004064D9 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill.png"; sourceTree = "<group>"; };
 		46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill@2x.png"; sourceTree = "<group>"; };
 		46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-twitterbird.png"; sourceTree = "<group>"; };
@@ -110,7 +114,6 @@
 		46BA367215BAF5ED0058F9BB /* 5-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5-info@2x.png"; sourceTree = "<group>"; };
 		46BA367315BAF5ED0058F9BB /* 6-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart.png"; sourceTree = "<group>"; };
 		46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart@2x.png"; sourceTree = "<group>"; };
->>>>>>> 4ca62ff69a78b09cb87bd5a0b734ffecb43996c4
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259B343B15BB1402004064D9 /* Twitter.framework in Frameworks */,
 				259B340515B8B620004064D9 /* CoreData.framework in Frameworks */,
 				259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */,
 				259B33AC15B89835004064D9 /* Foundation.framework in Frameworks */,
@@ -160,6 +164,7 @@
 		259B33A815B89835004064D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				259B343A15BB1402004064D9 /* Twitter.framework */,
 				259B340415B8B620004064D9 /* CoreData.framework */,
 				259B33A915B89835004064D9 /* UIKit.framework */,
 				259B33AB15B89835004064D9 /* Foundation.framework */,
@@ -183,12 +188,12 @@
 				259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */,
 				259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */,
 				259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */,
+				259B342B15BAF4F9004064D9 /* IGDetailViewController.h */,
+				259B342C15BAF4F9004064D9 /* IGDetailViewController.m */,
 				259B33E415B8A681004064D9 /* IGBackend.h */,
 				259B33E515B8A681004064D9 /* IGBackend.m */,
 				259B33E715B8AA15004064D9 /* IGDatabase.h */,
 				259B33E815B8AA15004064D9 /* IGDatabase.m */,
-				259B342B15BAF4F9004064D9 /* IGDetailViewController.h */,
-				259B342C15BAF4F9004064D9 /* IGDetailViewController.m */,
 			);
 			path = barcamp;
 			sourceTree = "<group>";
@@ -215,6 +220,8 @@
 		259B33D215B89881004064D9 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				259B343C15BB1781004064D9 /* twitter@2x.png */,
+				259B343D15BB1781004064D9 /* twitter.png */,
 				46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */,
 				46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */,
 				46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */,
@@ -236,6 +243,8 @@
 			children = (
 				259B340115B8B54D004064D9 /* DictionaryHelper.h */,
 				259B340215B8B54D004064D9 /* DictionaryHelper.m */,
+				259B343315BB1169004064D9 /* UILabel+ESAdjustableLabel.h */,
+				259B343415BB1169004064D9 /* UILabel+ESAdjustableLabel.m */,
 			);
 			name = utilities;
 			sourceTree = "<group>";
@@ -329,6 +338,8 @@
 				46BA367E15BAF5ED0058F9BB /* 5-info@2x.png in Resources */,
 				46BA367F15BAF5ED0058F9BB /* 6-heart.png in Resources */,
 				46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */,
+				259B343E15BB1781004064D9 /* twitter@2x.png in Resources */,
+				259B343F15BB1781004064D9 /* twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +361,7 @@
 				259B340915B8B772004064D9 /* Place.m in Sources */,
 				259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */,
 				259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */,
+				259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

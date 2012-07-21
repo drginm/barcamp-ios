@@ -60,6 +60,21 @@
     return results;
 }
 
+-(NSArray *)getArrayOfModel:(NSString *) model Predicate:(NSPredicate *) predicate SortDescriptors:(NSArray *) sortDescriptors{
+    NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:model inManagedObjectContext:context];
+    [request setEntity:description];
+    NSError *error;
+    
+    [request setPredicate:predicate];
+    [request setSortDescriptors:sortDescriptors];
+    
+    NSArray *results = [context executeFetchRequest:request error:&error];
+    
+    return results;
+}
+
 -(id)getObjectFromModel:(NSString *)model WithId:(NSNumber *)identifier{
     NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -204,7 +219,14 @@
 
 - (NSArray *)getUnconfForPlace:(Place *) place{
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@", place];
-    NSArray *unconfs = [self getArrayOfModel:@"Unconference" AndPredicate:predicate];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                        initWithKey:@"schedule_id"     
+                                        ascending:YES];
+    NSArray *descriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    
+    
+    NSArray *unconfs = [self getArrayOfModel:@"Unconference" Predicate:predicate SortDescriptors:descriptors];
     return unconfs;
 }
 

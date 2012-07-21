@@ -9,9 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class Place;
+@class Unconference;
+@class IGDetailViewController;
 
 @interface IGUnconferencesViewController : UITableViewController{
     NSArray *allUnconfs;
+    Unconference *selUnconference;
+    
+    @private
+    IGDetailViewController *detailVC;
 }
 
 @property (strong) Place *selPlace;

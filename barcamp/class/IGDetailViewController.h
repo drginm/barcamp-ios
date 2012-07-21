@@ -7,11 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Unconference;
 
-@interface IGDetailViewController : UIViewController
+@interface IGDetailViewController : UIViewController <UIScrollViewDelegate>
 
+@property (strong) Unconference *selUnconference;
+
+@property (weak, nonatomic) IBOutlet UIView *container;
 @property (weak, nonatomic) IBOutlet UILabel *titleLB;
 @property (weak, nonatomic) IBOutlet UILabel *scheduleLB;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLB;
+@property (weak, nonatomic) IBOutlet UILabel *speakersLB;
+@property (weak, nonatomic) IBOutlet UILabel *keywordsLB;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *detailsScroller;
+@property (weak, nonatomic) IBOutlet UIPageControl *detailsPager;
+
+- (IBAction)changePage;
+- (IBAction) sendTwit:(id)sender;
+- (IBAction)addToFav:(id)sender;
 
 @end

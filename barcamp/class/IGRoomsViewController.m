@@ -30,6 +30,7 @@
     if([[notification name] isEqualToString:@"updatePlaces"]){
         allPlaces = [[IGDatabase sharedDatabase] getModelAsArray:@"Place"];
         [[self tableView] reloadData];
+        [self.view setNeedsDisplay];
     }
 }
 
@@ -75,7 +76,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"roomsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {

@@ -7,6 +7,7 @@
 //
 
 #import "IGUnconferencesViewController.h"
+#import "IGDetailViewController.h"
 #import "IGDatabase.h"
 #import "Unconference.h"
 #import "Place.h"
@@ -76,7 +77,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"unconfCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     
@@ -85,7 +86,7 @@
     }
     
     cell.textLabel.text = [(Unconference *)[allUnconfs objectAtIndex:indexPath.row] name];
-    
+    cell.detailTextLabel.text = [(Unconference *)[allUnconfs objectAtIndex:indexPath.row] schedule];
     return cell;
 }
 
@@ -128,17 +129,23 @@
 }
 */
 
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"unconferenceDetail"]){
+        detailVC = [segue destinationViewController];
+        [detailVC setSelUnconference:selUnconference];
+    }
+}
+
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    selUnconference = [allUnconfs objectAtIndex:indexPath.row];
+    
+    [self performSegueWithIdentifier:@"unconferenceDetail" sender:self];
 }
 
 @end
