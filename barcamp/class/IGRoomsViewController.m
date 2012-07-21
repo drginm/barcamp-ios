@@ -17,6 +17,8 @@
 
 @implementation IGRoomsViewController
 
+@synthesize tableView;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -74,16 +76,21 @@
     return [allPlaces count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tbView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"roomsCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tbView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [(Place *)[allPlaces objectAtIndex:indexPath.row] name];
+    //cell.textLabel.text = [(Place *)[allPlaces objectAtIndex:indexPath.row] name];
+
+	UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+	nameLabel.text = [(Place *)[allPlaces objectAtIndex:indexPath.row] name];
+	UILabel *desconferenciaLabel = (UILabel *)[cell viewWithTag:101];
+	desconferenciaLabel.text = @"aquí iria la desconferencia";
     
     return cell;
 }

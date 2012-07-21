@@ -20,4 +20,7 @@
     
 }
 
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+
+
 @end

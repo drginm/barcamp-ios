@@ -20,6 +20,11 @@
 #define BARCAMP_URL @"http://barcampmedellin.org/"
 #define BARCAMP_TWITTER @"@barcamp_med"
 
+#define FONT_SIZE 13.0f
+#define CELL_CONTENT_WIDTH 295.0f
+#define CELL_CONTENT_MARGIN 10.0f
+
+
 #endif
 
 @interface IGConstants : NSObject

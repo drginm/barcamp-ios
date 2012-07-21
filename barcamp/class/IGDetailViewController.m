@@ -59,7 +59,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.title = selUnconference.name;
+    //self.title = selUnconference.name;
     self.titleLB.text = selUnconference.name;
     self.scheduleLB.text = selUnconference.schedule;
     self.descriptionLB.text = selUnconference.desc;

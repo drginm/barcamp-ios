@@ -96,11 +96,45 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     NSDictionary *entry = [twitterEntries objectAtIndex:indexPath.row];
+    NSString *text = [entry stringForKey:@"content"];
+    text = [text substringFromIndex:12];
+    text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
     
-    cell.textLabel.text = [entry stringForKey:@"content"];
+    CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH, 20000.0f);
+
+    
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+    
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+	    
+    nameLabel.text = text;
+
+    [nameLabel setFrame:CGRectMake(nameLabel.frame.origin.x, nameLabel.frame.origin.y, CELL_CONTENT_WIDTH, MAX(size.height, 44.0f))];
+    
+    NSString *publishedDate = [entry stringForKey:@"publishedDate"];
+    UILabel *dateLabel = (UILabel *)[cell viewWithTag:101];
+    dateLabel.text = publishedDate;
     
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSDictionary *entry = [twitterEntries objectAtIndex:indexPath.row];
+    NSString *text = [entry stringForKey:@"content"];
+    text = [text substringFromIndex:12];
+    text = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH, 20000.0f);
+    
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+    
+    CGFloat height = MAX(size.height, 44.0f);
+    
+    return height + 25;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
