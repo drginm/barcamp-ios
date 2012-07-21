@@ -33,9 +33,61 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Charlas" id="xWu-Vk-Xtd"/>
                     <navigationItem key="navigationItem" id="Pfm-ak-ded"/>
+                    <connections>
+                        <segue destination="grx-bW-3UK" kind="push" identifier="unconferenceDetail" id="Rdd-rm-jaL"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1329" y="180"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="RzG-el-zgT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MPN-Uh-b2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="grx-bW-3UK" customClass="IGDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AqC-Eh-DpQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wAV-cb-ytE">
+                                <rect key="frame" x="8" y="5" width="305" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KN0-OA-3d0">
+                                <rect key="frame" x="8" y="73" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LJ0-ax-8pH">
+                                <rect key="frame" x="8" y="112" width="305" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="p0R-Vr-knh">
+                                <rect key="frame" x="8" y="249" width="305" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NnV-eL-6Tr"/>
+                    <connections>
+                        <outlet property="scheduleLB" destination="KN0-OA-3d0" id="b9L-cw-WX5"/>
+                        <outlet property="titleLB" destination="wAV-cb-ytE" id="MoB-RW-cdN"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1838" y="180"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="IJX-NN-Eh5">
@@ -43,7 +95,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMw-Va-TYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="8sD-hY-R2q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vTw-KC-dRi"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Bp4-gT-EZi">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="Bp4-gT-EZi">
+                        <rect key="frame" x="0.0" y="-74" width="0.0" height="74"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -106,6 +160,21 @@
             <point key="canvasLocation" x="-200" y="180"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="IGDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scheduleLB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLB" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IGRoomsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRoomsViewController.h"/>
+        </class>
+        <class className="IGUnconferencesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGUnconferencesViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

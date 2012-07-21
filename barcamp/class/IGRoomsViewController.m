@@ -21,10 +21,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(updatePlaces:) 
-                                                     name:@"updatePlaces"
-                                                   object:nil];
+        
     }
     return self;
 }
@@ -39,6 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updatePlaces:) 
+                                                 name:@"updatePlaces"
+                                               object:nil];
+
+    self.navigationItem.title = @"Salas";
 
 }
 

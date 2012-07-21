@@ -113,6 +113,12 @@
         }
     }
     
+//    NSDictionary *places = [NSDictionary dictionaryWithObject:allPlaces forKey:PLACES_KEY];
+    
+    [[NSNotificationCenter defaultCenter] 
+     postNotificationName:@"updatePlaces" 
+     object:self userInfo:nil];
+    
 }
 
 #pragma mark - Unconferences

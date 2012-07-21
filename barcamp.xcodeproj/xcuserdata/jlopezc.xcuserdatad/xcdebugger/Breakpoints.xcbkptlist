@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "barcamp/class/IGDatabase.m"
-         timestampString = "364436172.880229"
+         timestampString = "364571223.283807"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
+         startingLineNumber = "135"
+         endingLineNumber = "135"
          landmarkName = "-updateLocalUnconferences:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "barcamp/class/IGRoomsViewController.m"
-         timestampString = "364569385.380064"
+         timestampString = "364572029.401436"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144"
+         startingLineNumber = "147"
+         endingLineNumber = "147"
          landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -56,16 +56,29 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "barcamp/class/IGRoomsViewController.m"
-         timestampString = "364570840.358259"
+         filePath = "barcamp/class/IGBackend.m"
+         timestampString = "364571265.610082"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "34"
-         endingLineNumber = "34"
-         landmarkName = "-updatePlaces:"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
+         landmarkName = "-updatePlaces"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "barcamp/class/IGDatabase.m"
+         timestampString = "364571321.120943"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "118"
+         endingLineNumber = "118"
+         landmarkName = "-updateLocalPlaces:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

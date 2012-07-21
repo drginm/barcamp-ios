@@ -9,6 +9,7 @@
 #import "IGUnconferencesViewController.h"
 #import "IGDatabase.h"
 #import "Unconference.h"
+#import "Place.h"
 
 @interface IGUnconferencesViewController ()
 
@@ -41,6 +42,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    self.navigationItem.title = selPlace.name;
+    
     allUnconfs = [[IGDatabase sharedDatabase] getUnconfForPlace:selPlace];
 }
 

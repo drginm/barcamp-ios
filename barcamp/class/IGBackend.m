@@ -54,11 +54,11 @@
 
             [[IGDatabase sharedDatabase] updateLocalPlaces:allPlaces];
              
-            NSDictionary *places = [NSDictionary dictionaryWithObject:allPlaces forKey:PLACES_KEY];
-            
-            [[NSNotificationCenter defaultCenter] 
-             postNotificationName:@"updatePlaces" 
-             object:self userInfo:places];
+//            NSDictionary *places = [NSDictionary dictionaryWithObject:allPlaces forKey:PLACES_KEY];
+//            
+//            [[NSNotificationCenter defaultCenter] 
+//             postNotificationName:@"updatePlaces" 
+//             object:self userInfo:places];
             
 
             
@@ -91,7 +91,7 @@
             
             [[IGDatabase sharedDatabase] updateLocalUnconferences:allUncf];
             
-            NSDictionary *places = [NSDictionary dictionaryWithObject:allUncf forKey:UNCONFERENCES_KEY];
+//            NSDictionary *places = [NSDictionary dictionaryWithObject:allUncf forKey:UNCONFERENCES_KEY];
             
             
         });

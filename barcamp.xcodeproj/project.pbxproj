@@ -41,6 +41,7 @@
 		259B342015B8C45D004064D9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341615B8C45D004064D9 /* Icon@2x.png */; };
 		259B342115B8C45D004064D9 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */; };
 		259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */; };
+		259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B342C15BAF4F9004064D9 /* IGDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGUnconferencesViewController.h; path = class/IGUnconferencesViewController.h; sourceTree = "<group>"; };
 		259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGUnconferencesViewController.m; path = class/IGUnconferencesViewController.m; sourceTree = "<group>"; };
+		259B342B15BAF4F9004064D9 /* IGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGDetailViewController.h; path = class/IGDetailViewController.h; sourceTree = "<group>"; };
+		259B342C15BAF4F9004064D9 /* IGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGDetailViewController.m; path = class/IGDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				259B33E515B8A681004064D9 /* IGBackend.m */,
 				259B33E715B8AA15004064D9 /* IGDatabase.h */,
 				259B33E815B8AA15004064D9 /* IGDatabase.m */,
+				259B342B15BAF4F9004064D9 /* IGDetailViewController.h */,
+				259B342C15BAF4F9004064D9 /* IGDetailViewController.m */,
 			);
 			path = barcamp;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				259B33F215B8AF3A004064D9 /* Unconference.m in Sources */,
 				259B340915B8B772004064D9 /* Place.m in Sources */,
 				259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */,
+				259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
