@@ -40,6 +40,9 @@
 		259B343B15BB1402004064D9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B343A15BB1402004064D9 /* Twitter.framework */; };
 		259B343E15BB1781004064D9 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B343C15BB1781004064D9 /* twitter@2x.png */; };
 		259B343F15BB1781004064D9 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B343D15BB1781004064D9 /* twitter.png */; };
+		259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344115BB1E03004064D9 /* TwitterViewController.m */; };
+		259B344A15BB2023004064D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B344915BB2023004064D9 /* QuartzCore.framework */; };
+		259B344B15BB2956004064D9 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344815BB1FBD004064D9 /* ODRefreshControl.m */; };
 		46BA367515BAF5ED0058F9BB /* 1-heart-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */; };
 		46BA367615BAF5ED0058F9BB /* 1-heart-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */; };
 		46BA367715BAF5ED0058F9BB /* 2-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */; };
@@ -102,6 +105,11 @@
 		259B343A15BB1402004064D9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		259B343C15BB1781004064D9 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 		259B343D15BB1781004064D9 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		259B344015BB1E03004064D9 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterViewController.h; path = class/TwitterViewController.h; sourceTree = "<group>"; };
+		259B344115BB1E03004064D9 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterViewController.m; path = class/TwitterViewController.m; sourceTree = "<group>"; };
+		259B344715BB1FBD004064D9 /* ODRefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
+		259B344815BB1FBD004064D9 /* ODRefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		259B344915BB2023004064D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill.png"; sourceTree = "<group>"; };
 		46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill@2x.png"; sourceTree = "<group>"; };
 		46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-twitterbird.png"; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259B344A15BB2023004064D9 /* QuartzCore.framework in Frameworks */,
 				259B343B15BB1402004064D9 /* Twitter.framework in Frameworks */,
 				259B340515B8B620004064D9 /* CoreData.framework in Frameworks */,
 				259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */,
@@ -164,6 +173,7 @@
 		259B33A815B89835004064D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				259B344915BB2023004064D9 /* QuartzCore.framework */,
 				259B343A15BB1402004064D9 /* Twitter.framework */,
 				259B340415B8B620004064D9 /* CoreData.framework */,
 				259B33A915B89835004064D9 /* UIKit.framework */,
@@ -194,6 +204,8 @@
 				259B33E515B8A681004064D9 /* IGBackend.m */,
 				259B33E715B8AA15004064D9 /* IGDatabase.h */,
 				259B33E815B8AA15004064D9 /* IGDatabase.m */,
+				259B344015BB1E03004064D9 /* TwitterViewController.h */,
+				259B344115BB1E03004064D9 /* TwitterViewController.m */,
 			);
 			path = barcamp;
 			sourceTree = "<group>";
@@ -241,6 +253,8 @@
 		259B340015B8B53E004064D9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				259B344715BB1FBD004064D9 /* ODRefreshControl.h */,
+				259B344815BB1FBD004064D9 /* ODRefreshControl.m */,
 				259B340115B8B54D004064D9 /* DictionaryHelper.h */,
 				259B340215B8B54D004064D9 /* DictionaryHelper.m */,
 				259B343315BB1169004064D9 /* UILabel+ESAdjustableLabel.h */,
@@ -350,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259B344B15BB2956004064D9 /* ODRefreshControl.m in Sources */,
 				259B340315B8B56A004064D9 /* DictionaryHelper.m in Sources */,
 				259B33B615B89836004064D9 /* main.m in Sources */,
 				259B33BA15B89836004064D9 /* AppDelegate.m in Sources */,
@@ -362,6 +377,7 @@
 				259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */,
 				259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */,
 				259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */,
+				259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

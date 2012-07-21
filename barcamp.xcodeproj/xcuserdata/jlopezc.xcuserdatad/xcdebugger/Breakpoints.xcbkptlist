@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "barcamp/class/IGBackend.m"
-         timestampString = "364571265.610082"
+         timestampString = "364587412.45742"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "-updatePlaces"
          landmarkType = "5">
       </FileBreakpoint>
@@ -79,6 +79,32 @@
          startingLineNumber = "133"
          endingLineNumber = "133"
          landmarkName = "-updateLocalPlaces:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "barcamp/class/TwitterViewController.m"
+         timestampString = "364587412.45742"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
+         landmarkName = "-updateTwitts:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "barcamp/class/IGBackend.m"
+         timestampString = "364587474.35282"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "127"
+         endingLineNumber = "127"
+         landmarkName = "-updateTwitts"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

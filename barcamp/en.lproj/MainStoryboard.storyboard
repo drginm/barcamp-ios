@@ -294,14 +294,55 @@
                     </tabBar>
                     <connections>
                         <segue destination="8sD-hY-R2q" kind="relationship" relationship="viewControllers" id="Ll4-b7-4WA"/>
+                        <segue destination="9uz-pv-Hi6" kind="relationship" relationship="viewControllers" id="8rA-HV-qLu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-200" y="180"/>
         </scene>
+        <!--Twitter View Controller - Item-->
+        <scene sceneID="dlW-bA-Zmn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYg-IL-K6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="9uz-pv-Hi6" customClass="TwitterViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eWp-BY-gb8">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="twitterCell" textLabel="4O1-CM-wKY" style="IBUITableViewCellStyleDefault" id="1Mz-Za-htE">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4O1-CM-wKY">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9uz-pv-Hi6" id="ql5-2G-peT"/>
+                            <outlet property="delegate" destination="9uz-pv-Hi6" id="nwn-3x-lFt"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="2-twitterbird.png" id="zjX-rf-DMd"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-200" y="887"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="2-twitterbird.png" width="22" height="22"/>
         <image name="3-list.png" width="20" height="14"/>
         <image name="6-heart.png" width="26" height="23"/>
         <image name="twitter.png" width="32" height="32"/>
