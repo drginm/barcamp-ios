@@ -66,7 +66,7 @@
     NSEntityDescription *description = [NSEntityDescription entityForName:model inManagedObjectContext:context];
     [request setEntity:description];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id = %@", identifier];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier = %@", identifier];
     [request setPredicate:predicate];
     NSError *error;
     
@@ -145,6 +145,14 @@
             unconference.start_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"StartTime"]];
             unconference.end_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"EndTime"]];
             
+            
+            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
+            
+            if (place != nil) {
+                unconference.place = place;
+            }
+                        
+            
             [context save:&error];
         } else {
             Unconference *unconference = (Unconference *)[results objectAtIndex:0];
@@ -157,6 +165,12 @@
             unconference.speakers = [unconferenceDict stringForKey:@"Speakers"];
             unconference.start_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"StartTime"]];
             unconference.end_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"EndTime"]];
+            
+            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
+            
+            if (place != nil) {
+                unconference.place = place;
+            }
             
             [context save:&error];
         }
@@ -183,7 +197,7 @@
 }
 
 - (NSArray *)getUnconfForPlace:(Place *) place{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@", place.identifier];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@", place];
     NSArray *unconfs = [self getArrayOfModel:@"Unconference" AndPredicate:predicate];
     return unconfs;
 }

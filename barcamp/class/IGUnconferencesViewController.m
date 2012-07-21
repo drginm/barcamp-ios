@@ -41,7 +41,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [[IGDatabase sharedDatabase] getUnconfForPlace:selPlace];
+    allUnconfs = [[IGDatabase sharedDatabase] getUnconfForPlace:selPlace];
 }
 
 - (void)viewDidUnload
