@@ -230,4 +230,24 @@
     return unconfs;
 }
 
+- (Unconference *)getNextUnconferenceForPlace:(Place *) place{
+
+    NSDate *now = [NSDate date];
+    Unconference *nextUnconf;
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@ AND start_time >= %@", place, now];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                        initWithKey:@"schedule_id"     
+                                        ascending:YES];
+    NSArray *descriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    
+    
+    NSArray *unconfsForPlace = [self getArrayOfModel:@"Unconference" Predicate:predicate SortDescriptors:descriptors];
+    
+    if (unconfsForPlace && [unconfsForPlace count] > 0) {
+        nextUnconf = (Unconference *)[unconfsForPlace objectAtIndex:0];
+    }
+    return nextUnconf;
+}
+
 @end

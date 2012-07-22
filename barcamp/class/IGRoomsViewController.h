@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @class IGUnconferencesViewController;
 @class Place;
 
-@interface IGRoomsViewController : UITableViewController{
+@interface IGRoomsViewController : UITableViewController <MBProgressHUDDelegate>{
     NSArray *allPlaces;
     Place *selectedPlace;
+    MBProgressHUD *HUD;
     
     @private
     IGUnconferencesViewController *unconfVC;

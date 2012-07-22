@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087F531B15BB9BDC00BDB19A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 087F531915BB9AE300BDB19A /* MBProgressHUD.m */; };
 		259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33A915B89835004064D9 /* UIKit.framework */; };
 		259B33AC15B89835004064D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AB15B89835004064D9 /* Foundation.framework */; };
 		259B33AE15B89835004064D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AD15B89835004064D9 /* CoreGraphics.framework */; };
@@ -58,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087F531815BB9AE300BDB19A /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		087F531915BB9AE300BDB19A /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		259B33A515B89835004064D9 /* barcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259B33A915B89835004064D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		259B33AB15B89835004064D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -253,6 +256,8 @@
 		259B340015B8B53E004064D9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				087F531815BB9AE300BDB19A /* MBProgressHUD.h */,
+				087F531915BB9AE300BDB19A /* MBProgressHUD.m */,
 				259B344715BB1FBD004064D9 /* ODRefreshControl.h */,
 				259B344815BB1FBD004064D9 /* ODRefreshControl.m */,
 				259B340115B8B54D004064D9 /* DictionaryHelper.h */,
@@ -364,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087F531B15BB9BDC00BDB19A /* MBProgressHUD.m in Sources */,
 				259B344B15BB2956004064D9 /* ODRefreshControl.m in Sources */,
 				259B340315B8B56A004064D9 /* DictionaryHelper.m in Sources */,
 				259B33B615B89836004064D9 /* main.m in Sources */,

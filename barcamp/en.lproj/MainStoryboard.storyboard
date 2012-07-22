@@ -358,12 +358,12 @@
             </objects>
             <point key="canvasLocation" x="858" y="803"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Twitts-->
         <scene sceneID="C3d-Gp-XfT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewB-UD-ZrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="pvG-IW-Coj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="2-twitterbird.png" id="zjX-rf-DMd"/>
+                    <tabBarItem key="tabBarItem" title="Twitts" image="2-twitterbird.png" id="zjX-rf-DMd"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="RU3-xH-vwd">
@@ -385,36 +385,6 @@
         <image name="6-heart.png" width="26" height="23"/>
         <image name="twitter.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="IGDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addToFav:"/>
-                <relationship kind="action" name="changePage"/>
-                <relationship kind="action" name="sendTwit:"/>
-                <relationship kind="outlet" name="container" candidateClass="UIView"/>
-                <relationship kind="outlet" name="descriptionLB" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailsPager" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="detailsScroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="keywordsLB" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scheduleLB" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="speakersLB" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLB" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="IGRoomsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRoomsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="IGUnconferencesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGUnconferencesViewController.h"/>
-        </class>
-        <class className="TwitterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

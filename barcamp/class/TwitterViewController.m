@@ -10,6 +10,7 @@
 #import "ODRefreshControl.h"
 #import "DictionaryHelper.h"
 #import "IGBackend.h"
+#import "MBProgressHUD.h"
 
 
 @interface TwitterViewController ()
@@ -53,6 +54,23 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[IGBackend sharedBackend] updateTwitts];
+    
+    
+    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+	[self.navigationController.view addSubview:HUD];
+	
+	HUD.delegate = self;
+	HUD.labelText = @"Cargando";
+	HUD.minSize = CGSizeMake(135.f, 135.f);
+    
+    [HUD show:YES];
+	
+
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -62,18 +80,21 @@
     if([[notification name] isEqualToString:@"updateTwitts"]){
         twitterEntries = [[notification userInfo] arrayForKey:TWITTS_KEY];
         [[self tableView] reloadData];
+        [HUD hide:YES];
         [self.view setNeedsDisplay];
     }
 }
 
 - (void)dropViewDidBeginRefreshing:(ODRefreshControl *)refreshControl
 {
+    [[IGBackend sharedBackend] updateTwitts];
+    
     double delayInSeconds = 3.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [refreshControl endRefreshing];
     });
-    [[IGBackend sharedBackend] updateTwitts];
+    
 }
 
 #pragma mark - Table view data source

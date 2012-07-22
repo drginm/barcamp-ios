@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class Place;
+@class Unconference;
 @interface IGDatabase : NSObject
 
 +(IGDatabase *)sharedDatabase;
@@ -21,4 +22,5 @@
 #pragma mark - Unconferences
 -(void)updateLocalUnconferences:(NSArray *)unconferences;
 - (NSArray *)getUnconfForPlace:(Place *) place;
+- (Unconference *)getNextUnconferenceForPlace:(Place *) place;
 @end

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
-@interface TwitterViewController : UITableViewController{
+@interface TwitterViewController : UITableViewController<MBProgressHUDDelegate>{
     NSArray *twitterEntries;
+    MBProgressHUD *HUD;
 }
 
 @end

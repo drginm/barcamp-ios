@@ -8,8 +8,10 @@
 
 #import "IGRoomsViewController.h"
 #import "IGUnconferencesViewController.h"
+#import "ODRefreshControl.h"
 #import "IGDatabase.h"
 #import "Place.h"
+#import "Unconference.h"
 
 @interface IGRoomsViewController ()
 
@@ -32,7 +34,8 @@
     if([[notification name] isEqualToString:@"updatePlaces"]){
         allPlaces = [[IGDatabase sharedDatabase] getModelAsArray:@"Place"];
         [[self tableView] reloadData];
-        [self.view setNeedsDisplay];
+        [HUD hide:YES];
+//        [self.view setNeedsDisplay];
     }
 }
 
@@ -45,7 +48,17 @@
                                                object:nil];
 
     self.navigationItem.title = @"Salas";
-
+    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+	[self.navigationController.view addSubview:HUD];
+	
+	HUD.delegate = self;
+	HUD.labelText = @"Cargando";
+	HUD.minSize = CGSizeMake(135.f, 135.f);
+    
+    [HUD show:YES];
+    
+    ODRefreshControl *refreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
+    [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewDidUnload
@@ -57,11 +70,23 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     allPlaces = [[IGDatabase sharedDatabase] getModelAsArray:@"Place"];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)dropViewDidBeginRefreshing:(ODRefreshControl *)refreshControl
+{
+    [self.tableView reloadData];
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [refreshControl endRefreshing];
+    });
+    
 }
 
 #pragma mark - Table view data source
@@ -86,11 +111,16 @@
     }
     
     //cell.textLabel.text = [(Place *)[allPlaces objectAtIndex:indexPath.row] name];
+    
+    Place *current = (Place *)[allPlaces objectAtIndex:indexPath.row];
 
 	UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-	nameLabel.text = [(Place *)[allPlaces objectAtIndex:indexPath.row] name];
+	nameLabel.text = [current name];
+    
+    Unconference *next = [[IGDatabase sharedDatabase] getNextUnconferenceForPlace:current];
+    
 	UILabel *desconferenciaLabel = (UILabel *)[cell viewWithTag:101];
-	desconferenciaLabel.text = @"aquí iria la desconferencia";
+	desconferenciaLabel.text =next.name;
     
     return cell;
 }
