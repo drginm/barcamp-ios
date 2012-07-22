@@ -43,6 +43,8 @@
 		259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344115BB1E03004064D9 /* TwitterViewController.m */; };
 		259B344A15BB2023004064D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B344915BB2023004064D9 /* QuartzCore.framework */; };
 		259B344B15BB2956004064D9 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344815BB1FBD004064D9 /* ODRefreshControl.m */; };
+		46A5ED0A15BB99D70010DF50 /* 7-bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A5ED0815BB99D70010DF50 /* 7-bell.png */; };
+		46A5ED0B15BB99D70010DF50 /* 7-bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A5ED0915BB99D70010DF50 /* 7-bell@2x.png */; };
 		46BA367515BAF5ED0058F9BB /* 1-heart-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */; };
 		46BA367615BAF5ED0058F9BB /* 1-heart-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */; };
 		46BA367715BAF5ED0058F9BB /* 2-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */; };
@@ -110,6 +112,8 @@
 		259B344715BB1FBD004064D9 /* ODRefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		259B344815BB1FBD004064D9 /* ODRefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 		259B344915BB2023004064D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		46A5ED0815BB99D70010DF50 /* 7-bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-bell.png"; sourceTree = "<group>"; };
+		46A5ED0915BB99D70010DF50 /* 7-bell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-bell@2x.png"; sourceTree = "<group>"; };
 		46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill.png"; sourceTree = "<group>"; };
 		46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill@2x.png"; sourceTree = "<group>"; };
 		46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-twitterbird.png"; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				46BA367215BAF5ED0058F9BB /* 5-info@2x.png */,
 				46BA367315BAF5ED0058F9BB /* 6-heart.png */,
 				46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */,
+				46A5ED0815BB99D70010DF50 /* 7-bell.png */,
+				46A5ED0915BB99D70010DF50 /* 7-bell@2x.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -354,6 +360,8 @@
 				46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */,
 				259B343E15BB1781004064D9 /* twitter@2x.png in Resources */,
 				259B343F15BB1781004064D9 /* twitter.png in Resources */,
+				46A5ED0A15BB99D70010DF50 /* 7-bell.png in Resources */,
+				46A5ED0B15BB99D70010DF50 /* 7-bell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
