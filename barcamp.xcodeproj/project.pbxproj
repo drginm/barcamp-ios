@@ -63,6 +63,7 @@
 		46BA367E15BAF5ED0058F9BB /* 5-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367215BAF5ED0058F9BB /* 5-info@2x.png */; };
 		46BA367F15BAF5ED0058F9BB /* 6-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367315BAF5ED0058F9BB /* 6-heart.png */; };
 		46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */; };
+		46D2462015BC9670006CFB99 /* IGFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D2461F15BC966F006CFB99 /* IGFavoritesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,8 @@
 		46BA367215BAF5ED0058F9BB /* 5-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5-info@2x.png"; sourceTree = "<group>"; };
 		46BA367315BAF5ED0058F9BB /* 6-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart.png"; sourceTree = "<group>"; };
 		46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart@2x.png"; sourceTree = "<group>"; };
+		46D2461E15BC966F006CFB99 /* IGFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGFavoritesViewController.h; path = class/IGFavoritesViewController.h; sourceTree = "<group>"; };
+		46D2461F15BC966F006CFB99 /* IGFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGFavoritesViewController.m; path = class/IGFavoritesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,8 @@
 				259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */,
 				259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */,
 				259B342915B8C86B004064D9 /* IGUnconferencesViewController.m */,
+				46D2461E15BC966F006CFB99 /* IGFavoritesViewController.h */,
+				46D2461F15BC966F006CFB99 /* IGFavoritesViewController.m */,
 				259B342B15BAF4F9004064D9 /* IGDetailViewController.h */,
 				259B342C15BAF4F9004064D9 /* IGDetailViewController.m */,
 				259B33E415B8A681004064D9 /* IGBackend.h */,
@@ -414,6 +419,7 @@
 				259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */,
 				259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */,
 				46AF655115BC3072000A2F02 /* AboutViewController.m in Sources */,
+				46D2462015BC9670006CFB99 /* IGFavoritesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

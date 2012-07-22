@@ -52,7 +52,7 @@
 	[self.navigationController.view addSubview:HUD];
 	
 	HUD.delegate = self;
-	HUD.labelText = @"Cargando";
+	HUD.labelText = @"Actualizando";
 	HUD.minSize = CGSizeMake(135.f, 135.f);
     
     [HUD show:YES];
