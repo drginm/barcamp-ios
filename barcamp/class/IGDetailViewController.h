@@ -27,4 +27,7 @@
 - (IBAction) sendTwit:(id)sender;
 - (IBAction)addToFav:(id)sender;
 
+- (IBAction)prepararNotificacion:(id)sender;
+- (void)programarNotificacion;
+
 @end

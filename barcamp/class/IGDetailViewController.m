@@ -10,6 +10,7 @@
 #import "Unconference.h"
 #import "Place.h"
 #import "UILabel+ESAdjustableLabel.h"
+#import "AppDelegate.h"
 
 
 @interface IGDetailViewController ()
@@ -78,6 +79,31 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - notificacion
+- (void)programarNotificacion
+{
+    UILocalNotification *notificacion = [[UILocalNotification alloc] init];
+    notificacion.fireDate = selUnconference.start_time;
+    notificacion.timeZone = [NSTimeZone defaultTimeZone];
+    
+    notificacion.alertBody = selUnconference.name;
+    notificacion.alertAction = nil;
+    notificacion.soundName = UILocalNotificationDefaultSoundName;
+    //notificacion.applicationIconBadgeNumber = 1;
+    notificacion.applicationIconBadgeNumber=[[UIApplication sharedApplication] applicationIconBadgeNumber]+1;
+    
+    NSDictionary *userDict = [NSDictionary dictionaryWithObject:selUnconference.identifier forKey:kNotificationTextKey];
+    notificacion.userInfo = userDict;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notificacion];
+}
+
+- (IBAction)prepararNotificacion:(id)sender
+{
+//    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [self programarNotificacion];
 }
 
 #pragma mark - Share
