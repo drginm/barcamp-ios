@@ -46,6 +46,11 @@
 		259B344B15BB2956004064D9 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344815BB1FBD004064D9 /* ODRefreshControl.m */; };
 		46A5ED0A15BB99D70010DF50 /* 7-bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A5ED0815BB99D70010DF50 /* 7-bell.png */; };
 		46A5ED0B15BB99D70010DF50 /* 7-bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A5ED0915BB99D70010DF50 /* 7-bell@2x.png */; };
+		46AF655115BC3072000A2F02 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AF655015BC3072000A2F02 /* AboutViewController.m */; };
+		46AF655515BC37B2000A2F02 /* about_barcamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AF655315BC37B2000A2F02 /* about_barcamp.png */; };
+		46AF655615BC37B2000A2F02 /* about_barcamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AF655415BC37B2000A2F02 /* about_barcamp@2x.png */; };
+		46AF655915BC3B35000A2F02 /* about_texto.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AF655715BC3B35000A2F02 /* about_texto.png */; };
+		46AF655A15BC3B35000A2F02 /* about_texto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AF655815BC3B35000A2F02 /* about_texto@2x.png */; };
 		46BA367515BAF5ED0058F9BB /* 1-heart-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */; };
 		46BA367615BAF5ED0058F9BB /* 1-heart-fill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */; };
 		46BA367715BAF5ED0058F9BB /* 2-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */; };
@@ -117,6 +122,12 @@
 		259B344915BB2023004064D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		46A5ED0815BB99D70010DF50 /* 7-bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-bell.png"; sourceTree = "<group>"; };
 		46A5ED0915BB99D70010DF50 /* 7-bell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-bell@2x.png"; sourceTree = "<group>"; };
+		46AF654F15BC3072000A2F02 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = class/AboutViewController.h; sourceTree = "<group>"; };
+		46AF655015BC3072000A2F02 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = class/AboutViewController.m; sourceTree = "<group>"; };
+		46AF655315BC37B2000A2F02 /* about_barcamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_barcamp.png; sourceTree = "<group>"; };
+		46AF655415BC37B2000A2F02 /* about_barcamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_barcamp@2x.png"; sourceTree = "<group>"; };
+		46AF655715BC3B35000A2F02 /* about_texto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_texto.png; sourceTree = "<group>"; };
+		46AF655815BC3B35000A2F02 /* about_texto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_texto@2x.png"; sourceTree = "<group>"; };
 		46BA366915BAF5ED0058F9BB /* 1-heart-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill.png"; sourceTree = "<group>"; };
 		46BA366A15BAF5ED0058F9BB /* 1-heart-fill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-heart-fill@2x.png"; sourceTree = "<group>"; };
 		46BA366B15BAF5ED0058F9BB /* 2-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-twitterbird.png"; sourceTree = "<group>"; };
@@ -201,6 +212,8 @@
 				259B33BB15B89836004064D9 /* MainStoryboard.storyboard */,
 				259B33B015B89835004064D9 /* Supporting Files */,
 				259B33E115B8A3A4004064D9 /* IGConstants.h */,
+				46AF654F15BC3072000A2F02 /* AboutViewController.h */,
+				46AF655015BC3072000A2F02 /* AboutViewController.m */,
 				259B33DE15B8A2B9004064D9 /* IGRoomsViewController.h */,
 				259B33DF15B8A2B9004064D9 /* IGRoomsViewController.m */,
 				259B342815B8C86A004064D9 /* IGUnconferencesViewController.h */,
@@ -255,6 +268,10 @@
 				46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */,
 				46A5ED0815BB99D70010DF50 /* 7-bell.png */,
 				46A5ED0915BB99D70010DF50 /* 7-bell@2x.png */,
+				46AF655315BC37B2000A2F02 /* about_barcamp.png */,
+				46AF655415BC37B2000A2F02 /* about_barcamp@2x.png */,
+				46AF655715BC3B35000A2F02 /* about_texto.png */,
+				46AF655815BC3B35000A2F02 /* about_texto@2x.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -367,6 +384,10 @@
 				259B343F15BB1781004064D9 /* twitter.png in Resources */,
 				46A5ED0A15BB99D70010DF50 /* 7-bell.png in Resources */,
 				46A5ED0B15BB99D70010DF50 /* 7-bell@2x.png in Resources */,
+				46AF655515BC37B2000A2F02 /* about_barcamp.png in Resources */,
+				46AF655615BC37B2000A2F02 /* about_barcamp@2x.png in Resources */,
+				46AF655915BC3B35000A2F02 /* about_texto.png in Resources */,
+				46AF655A15BC3B35000A2F02 /* about_texto@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +413,7 @@
 				259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */,
 				259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */,
 				259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */,
+				46AF655115BC3072000A2F02 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
