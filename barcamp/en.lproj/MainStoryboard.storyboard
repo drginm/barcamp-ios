@@ -192,9 +192,10 @@
                                 </state>
                                 <connections>
                                     <action selector="addToFav:" destination="grx-bW-3UK" eventType="touchUpInside" id="312-kN-nKG"/>
+                                    <action selector="prepararNotificacion:" destination="grx-bW-3UK" eventType="touchUpInside" id="s4d-g8-ej1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kQG-2z-S9S">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kQG-2z-S9S">
                                 <rect key="frame" x="138" y="65" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -576,6 +577,43 @@
         <image name="about_texto.png" width="320" height="150"/>
         <image name="twitter.png" width="32" height="32"/>
     </resources>
+    <classes>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+        </class>
+        <class className="IGDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addToFav:"/>
+                <relationship kind="action" name="changePage"/>
+                <relationship kind="action" name="prepararNotificacion:"/>
+                <relationship kind="action" name="sendTwit:"/>
+                <relationship kind="outlet" name="container" candidateClass="UIView"/>
+                <relationship kind="outlet" name="descriptionLB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailsPager" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="detailsScroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="keywordsLB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scheduleLB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="speakersLB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLB" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="IGFavoritesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGFavoritesViewController.h"/>
+        </class>
+        <class className="IGRoomsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGRoomsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="IGUnconferencesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IGUnconferencesViewController.h"/>
+        </class>
+        <class className="TwitterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

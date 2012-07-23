@@ -149,7 +149,35 @@
 - (IBAction)prepararNotificacion:(id)sender
 {
 //    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [self programarNotificacion];
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] 
+                          initWithTitle: NSLocalizedString(@"Favorita",nil)
+                          message: NSLocalizedString(@"¿Desea agregar esta charla a su lista de favoritos?",nil)
+                          delegate: self
+                          cancelButtonTitle: NSLocalizedString(@"No",nil)
+                          otherButtonTitles: NSLocalizedString(@"Si",nil), nil];
+    [alert show];
+    
+    
+}
+
+// Called when an alertview button is touched
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    switch (buttonIndex) {
+        case 0: 
+        {       
+            NSLog(@"No agregó");
+        }
+            break;
+            
+        case 1: 
+        {
+            [self programarNotificacion];
+        }
+            break;
+    }
 }
 
 #pragma mark - Share

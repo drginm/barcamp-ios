@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Unconference;
 
-@interface IGDetailViewController : UIViewController <UIScrollViewDelegate>
+@interface IGDetailViewController : UIViewController <UIScrollViewDelegate, UIAlertViewDelegate>
 
 @property (strong) Unconference *selUnconference;
 
