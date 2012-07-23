@@ -84,20 +84,66 @@
 #pragma mark - notificacion
 - (void)programarNotificacion
 {
-    UILocalNotification *notificacion = [[UILocalNotification alloc] init];
-    notificacion.fireDate = selUnconference.start_time;
-    notificacion.timeZone = [NSTimeZone defaultTimeZone];
     
-    notificacion.alertBody = selUnconference.name;
-    notificacion.alertAction = nil;
-    notificacion.soundName = UILocalNotificationDefaultSoundName;
-    //notificacion.applicationIconBadgeNumber = 1;
-    notificacion.applicationIconBadgeNumber=[[UIApplication sharedApplication] applicationIconBadgeNumber]+1;
+//    UILocalNotification *notificacion = [[UILocalNotification alloc] init];
+//    notificacion.fireDate = selUnconference.start_time;
+//    notificacion.timeZone = [NSTimeZone defaultTimeZone];
+//    
+//    notificacion.alertBody = selUnconference.name;
+//    notificacion.alertAction = nil;
+//    notificacion.soundName = UILocalNotificationDefaultSoundName;
+//    //notificacion.applicationIconBadgeNumber = 1;
+//    notificacion.applicationIconBadgeNumber=[[UIApplication sharedApplication] applicationIconBadgeNumber]+1;
+//    
+//    NSDictionary *userDict = [NSDictionary dictionaryWithObject:selUnconference.identifier forKey:kNotificationTextKey];
+//    notificacion.userInfo = userDict;
+//    
+//    [[UIApplication sharedApplication] scheduleLocalNotification:notificacion];
     
-    NSDictionary *userDict = [NSDictionary dictionaryWithObject:selUnconference.identifier forKey:kNotificationTextKey];
-    notificacion.userInfo = userDict;
     
-    [[UIApplication sharedApplication] scheduleLocalNotification:notificacion];
+    
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    
+    // Get the current date
+    NSDate *pickerDate = selUnconference.start_time;
+    
+    // Break the date up into components
+    NSDateComponents *dateComponents = [calendar components:( NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit )
+												   fromDate:pickerDate];
+    NSDateComponents *timeComponents = [calendar components:( NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit )
+												   fromDate:pickerDate];
+    // Set up the fire time
+    NSDateComponents *dateComps = [[NSDateComponents alloc] init];
+    [dateComps setDay:[dateComponents day]];
+    [dateComps setMonth:[dateComponents month]];
+    [dateComps setYear:[dateComponents year]];
+    [dateComps setHour:[timeComponents hour]];
+	// Notification will fire in one minute
+    [dateComps setMinute:[timeComponents minute]];
+	[dateComps setSecond:[timeComponents second]];
+    NSDate *itemDate = [calendar dateFromComponents:dateComps];
+    
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    localNotif.fireDate = itemDate;
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    
+	// Notification details
+    localNotif.alertBody = selUnconference.name;
+	// Set the action button
+    localNotif.alertAction = @"View";
+    
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    localNotif.applicationIconBadgeNumber = 1;
+    
+	// Specify custom data for the notification
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"someValue" forKey:@"someKey"];
+    localNotif.userInfo = infoDict;
+    
+	// Schedule the notification
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+
 }
 
 - (IBAction)prepararNotificacion:(id)sender

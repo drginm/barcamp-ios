@@ -81,8 +81,12 @@
     
     // Display notification info
     [cell.textLabel setText:notif.alertBody];
-    [cell.detailTextLabel setText:[notif.fireDate description]];
     
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"hh:mm a"];
+    
+    [cell.detailTextLabel setText:[dateFormat stringFromDate:notif.fireDate]];
+     
     return cell;
 }
 
