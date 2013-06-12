@@ -24,7 +24,7 @@ NSString *kNotificationTextKey = @"kNotificationTextKey";
     // Override point for customization after application launch.
     
     [[IGBackend sharedBackend] updatePlaces];
-    [[IGBackend sharedBackend] updateUnconferences];
+//    [[IGBackend sharedBackend] updateUnconferences];
     
     return YES;
 }

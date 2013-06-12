@@ -51,6 +51,19 @@
     HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
 	[self.navigationController.view addSubview:HUD];
 	
+    [self.tabBarItem setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor darkGrayColor],
+     UITextAttributeFont : [UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0f]} forState:UIControlStateNormal];
+    
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{
+//                                 UITextAttributeFont : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+//                            UITextAttributeTextColor : [UIColor colorWithRed:0/255.0 green:255/255.0 blue:0/255.0 alpha:1.0],}
+//                                             forState:UIControlStateNormal];
+//    
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{
+//                                 UITextAttributeFont : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+//                            UITextAttributeTextColor : [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:1.0],}
+//                                             forState:UIControlStateSelected];
+    
 	HUD.delegate = self;
 	HUD.labelText = @"Actualizando";
 	HUD.minSize = CGSizeMake(135.f, 135.f);

@@ -102,7 +102,7 @@
     NSError *error;
     
     for (NSDictionary *placeDict in places) {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier = %@", [placeDict objectForKey:@"Identifier"]];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier = %@", [placeDict objectForKey:@"id"]];
         [request setPredicate:predicate];
         
         NSArray *results = [context executeFetchRequest:request error:&error];
@@ -110,22 +110,29 @@
         if([results count] == 0){
             Place *place = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:context];
             
-            place.identifier = [placeDict numberForKey:@"Identifier"];
-            place.name = [placeDict stringForKey:@"Name"];
-            place.desc = [placeDict stringForKey:@"Description"];
-            place.image = [placeDict stringForKey:@"Image"];
+            place.identifier = [placeDict numberForKey:@"id"];
+            place.name = [placeDict stringForKey:@"nombre"];
+            place.desc = [placeDict stringForKey:@"descripcion"];
+            place.image = [placeDict stringForKey:@"imagen"];
             
                         
-            [context save:&error];
+//            [context save:&error];
+            [self updateLocalUnconferences:[placeDict objectForKey:@"Conferencias"] forPlace:place];
         } else {
-            Place *place = (Place *)[results objectAtIndex:0];
+            Place *place = (Place *)[results lastObject];
 
-            place.name = [placeDict stringForKey:@"Name"];
-            place.desc = [placeDict stringForKey:@"Description"];
-            place.image = [placeDict stringForKey:@"Image"];
+            place.name = [placeDict stringForKey:@"nombre"];
+            place.desc = [placeDict stringForKey:@"descripcion"];
+            place.image = [placeDict stringForKey:@"imagen"];
+            [self updateLocalUnconferences:[placeDict objectForKey:@"Conferencias"] forPlace:place];
             
-            [context save:&error];
+            
         }
+        
+        
+        [context save:&error];
+        
+        
     }
     
 //    NSDictionary *places = [NSDictionary dictionaryWithObject:allPlaces forKey:PLACES_KEY];
@@ -137,6 +144,96 @@
 }
 
 #pragma mark - Unconferences
+
+
+-(void)updateLocalUnconferences:(NSArray *)unconferences forPlace:(Place *)place{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    
+    NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Unconference" inManagedObjectContext:context];
+    [request setEntity:description];
+    NSError *error;
+    
+    for (NSDictionary *unconferenceDict in unconferences) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier = %@", [unconferenceDict objectForKey:@"id"]];
+        [request setPredicate:predicate];
+        
+        NSArray *results = [context executeFetchRequest:request error:&error];
+        
+        if([results count] == 0){
+            Unconference *unconference = [NSEntityDescription insertNewObjectForEntityForName:@"Unconference" inManagedObjectContext:context];
+            
+            unconference.identifier = [unconferenceDict numberForKey:@"id"];
+            unconference.name = [unconferenceDict stringForKey:@"nombre"];
+            unconference.desc = [unconferenceDict stringForKey:@"resumen"];
+            unconference.keywords = [unconferenceDict stringForKey:@"palabrasClave"];
+            //            unconference.schedule = [unconferenceDict stringForKey:@"horario"];
+            //            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
+            unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
+            
+            NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
+            
+            
+//            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
+            
+            if (place != nil) {
+                unconference.place = place;
+            }
+            
+//            [context save:&error];
+        
+        } else {
+            Unconference *unconference = (Unconference *)[results objectAtIndex:0];
+            
+            unconference.identifier = [unconferenceDict numberForKey:@"id"];
+            unconference.name = [unconferenceDict stringForKey:@"nombre"];
+            unconference.desc = [unconferenceDict stringForKey:@"resumen"];
+            unconference.keywords = [unconferenceDict stringForKey:@"palabrasClave"];
+            //            unconference.schedule = [unconferenceDict stringForKey:@"horario"];
+            //            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
+            unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
+            
+            NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
+            
+//            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
+            
+            if (place != nil) {
+                unconference.place = place;
+            }
+//            [context save:&error];
+    
+        }
+    }
+    
+    
+//    NSMutableArray *unconferenceArray = [[self getModelAsArray:@"Unconference"] mutableCopy];
+//    if([unconferences count] < [unconferenceArray count]){
+//        for (Unconference *current in unconferenceArray) {
+//            BOOL shouldDelete = YES;
+//            
+//            for (NSDictionary *currentDict in unconferences) {
+//                if (current.identifier) {
+//                    shouldDelete = NO;
+//                    break;
+//                }
+//            }
+//            
+//            if (shouldDelete) {
+//                [context deleteObject:current];
+//            }
+//        }
+//    }
+
+}
+
+
+
 -(void)updateLocalUnconferences:(NSArray *)unconferences{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
@@ -156,15 +253,17 @@
         if([results count] == 0){
             Unconference *unconference = [NSEntityDescription insertNewObjectForEntityForName:@"Unconference" inManagedObjectContext:context];
             
-            unconference.identifier = [unconferenceDict numberForKey:@"Identifier"];
-            unconference.name = [unconferenceDict stringForKey:@"Name"];
-            unconference.desc = [unconferenceDict stringForKey:@"Description"];
-            unconference.keywords = [unconferenceDict stringForKey:@"Keywords"];
-            unconference.schedule = [unconferenceDict stringForKey:@"Schedule"];
-            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
-            unconference.speakers = [unconferenceDict stringForKey:@"Speakers"];
-            unconference.start_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"StartTime"]];
-            unconference.end_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"EndTime"]];
+            unconference.identifier = [unconferenceDict numberForKey:@"id"];
+            unconference.name = [unconferenceDict stringForKey:@"nombre"];
+            unconference.desc = [unconferenceDict stringForKey:@"resumen"];
+            unconference.keywords = [unconferenceDict stringForKey:@"palabrasClave"];
+//            unconference.schedule = [unconferenceDict stringForKey:@"horario"];
+//            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
+            unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
+            
+            NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
             
             
             Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
@@ -178,14 +277,17 @@
         } else {
             Unconference *unconference = (Unconference *)[results objectAtIndex:0];
             
-            unconference.name = [unconferenceDict stringForKey:@"Name"];
-            unconference.desc = [unconferenceDict stringForKey:@"Description"];
-            unconference.keywords = [unconferenceDict stringForKey:@"Keywords"];
-            unconference.schedule = [unconferenceDict stringForKey:@"Schedule"];
-            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
-            unconference.speakers = [unconferenceDict stringForKey:@"Speakers"];
-            unconference.start_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"StartTime"]];
-            unconference.end_time = [dateFormatter dateFromString:[unconferenceDict stringForKey:@"EndTime"]];
+            unconference.identifier = [unconferenceDict numberForKey:@"id"];
+            unconference.name = [unconferenceDict stringForKey:@"nombre"];
+            unconference.desc = [unconferenceDict stringForKey:@"resumen"];
+            unconference.keywords = [unconferenceDict stringForKey:@"palabrasClave"];
+            //            unconference.schedule = [unconferenceDict stringForKey:@"horario"];
+            //            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
+            unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
+            
+            NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
             
             Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
             
@@ -216,6 +318,7 @@
     }
     
 }
+
 
 - (NSArray *)getUnconfForPlace:(Place *) place{
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@", place];

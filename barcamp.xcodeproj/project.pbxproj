@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		087F531B15BB9BDC00BDB19A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 087F531915BB9AE300BDB19A /* MBProgressHUD.m */; };
+		255CD1751768BA0A0033DAD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */; };
+		255CD1771768BA240033DAD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255CD1761768BA240033DAD5 /* Default-568h@2x.png */; };
 		259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33A915B89835004064D9 /* UIKit.framework */; };
 		259B33AC15B89835004064D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AB15B89835004064D9 /* Foundation.framework */; };
 		259B33AE15B89835004064D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AD15B89835004064D9 /* CoreGraphics.framework */; };
@@ -69,6 +71,8 @@
 /* Begin PBXFileReference section */
 		087F531815BB9AE300BDB19A /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		087F531915BB9AE300BDB19A /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		255CD1761768BA240033DAD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		259B33A515B89835004064D9 /* barcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259B33A915B89835004064D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		259B33AB15B89835004064D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +169,7 @@
 		259B339A15B89834004064D9 = {
 			isa = PBXGroup;
 			children = (
+				255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */,
 				259B340E15B8C45C004064D9 /* Icon-72.png */,
 				259B340F15B8C45C004064D9 /* Icon-72@2x.png */,
 				259B341015B8C45C004064D9 /* Icon-Small-50.png */,
@@ -177,6 +182,7 @@
 				259B341715B8C45D004064D9 /* iTunesArtwork@2x.png */,
 				259B33FE15B8B43A004064D9 /* Default@2x.png */,
 				259B33FC15B8B436004064D9 /* Default.png */,
+				255CD1761768BA240033DAD5 /* Default-568h@2x.png */,
 				259B33AF15B89835004064D9 /* barcamp */,
 				259B33A815B89835004064D9 /* Frameworks */,
 				259B33A615B89835004064D9 /* Products */,
@@ -393,6 +399,8 @@
 				46AF655615BC37B2000A2F02 /* about_barcamp@2x.png in Resources */,
 				46AF655915BC3B35000A2F02 /* about_texto.png in Resources */,
 				46AF655A15BC3B35000A2F02 /* about_texto@2x.png in Resources */,
+				255CD1751768BA0A0033DAD5 /* Default-568h@2x.png in Resources */,
+				255CD1771768BA240033DAD5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

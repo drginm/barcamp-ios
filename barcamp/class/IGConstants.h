@@ -9,8 +9,8 @@
 #ifndef IG_Constants_h
 #define IG_Constants_h
 
-#define API_PLACES @"http://barcampmedellin.org/barcampmed2012/Services/BarCamp.svc/GetPlaces"
-#define API_UNCONFERENCE @"http://barcampmedellin.org/barcampmed2012/Services/BarCamp.svc/GetUnconferences"
+#define API_PLACES @"http://barcampmed.azurewebsites.net/api/programacion"
+#define API_UNCONFERENCE @"http://barcampmed.azurewebsites.net/api/Conferencias"
 #define API_TWITTER_QUERY @"http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=20&q=https://twitter.com/statuses/user_timeline/36675597.rss"
 
 #define PLACES_KEY @"places"
