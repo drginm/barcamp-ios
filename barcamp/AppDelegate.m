@@ -26,6 +26,17 @@ NSString *kNotificationTextKey = @"kNotificationTextKey";
     [[IGBackend sharedBackend] updatePlaces];
 //    [[IGBackend sharedBackend] updateUnconferences];
     
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor darkGrayColor],
+                       UITextAttributeFont : [UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0f]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor],
+                       UITextAttributeFont : [UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0f]} forState:UIControlStateSelected];
+    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor], UITextAttributeTextColor, [UIColor whiteColor], UITextAttributeTextShadowColor, nil];
+    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes: textTitleOptions
+                                                forState: UIControlStateNormal];
+    
     return YES;
 }
 							

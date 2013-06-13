@@ -148,7 +148,10 @@
 
 -(void)updateLocalUnconferences:(NSArray *)unconferences forPlace:(Place *)place{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    
+    NSDateFormatter *hourFormatter = [[NSDateFormatter alloc] init];
+    [hourFormatter setDateFormat:@"HH:mm a"];
     
     NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -169,13 +172,17 @@
             unconference.name = [unconferenceDict stringForKey:@"nombre"];
             unconference.desc = [unconferenceDict stringForKey:@"resumen"];
             unconference.keywords = [unconferenceDict stringForKey:@"palabrasClave"];
-            //            unconference.schedule = [unconferenceDict stringForKey:@"horario"];
-            //            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
+
             unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
             
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
-            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
-            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
+            
+            
+            unconference.schedule = [NSString stringWithFormat:@"%@ - %@", [hourFormatter stringFromDate:unconference.start_time], [hourFormatter stringFromDate:unconference.end_time]];
+//            unconference.schedule_id = [unconferenceDict numberForKey:@"ScheduleId"];
+            
             
             
 //            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
@@ -198,8 +205,10 @@
             unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
             
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
-            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
-            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
+            
+            unconference.schedule = [NSString stringWithFormat:@"%@ - %@", [hourFormatter stringFromDate:unconference.start_time], [hourFormatter stringFromDate:unconference.end_time]];
             
 //            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
             
@@ -236,7 +245,7 @@
 
 -(void)updateLocalUnconferences:(NSArray *)unconferences{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-ddTHH:mm:ss"];
     
     NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -262,8 +271,8 @@
             unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
             
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
-            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
-            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
             
             
             Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
@@ -286,8 +295,8 @@
             unconference.speakers = [unconferenceDict stringForKey:@"expositores"];
             
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
-            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"horaInicio"]];
-            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"horaFin"]];
+            unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
+            unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
             
             Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
             
