@@ -12,6 +12,7 @@
 #import "IGDatabase.h"
 #import "Place.h"
 #import "Unconference.h"
+#import "AppDelegate.h"
 
 @interface IGRoomsViewController ()
 
@@ -34,7 +35,8 @@
     if([[notification name] isEqualToString:@"updatePlaces"]){
         allPlaces = [[IGDatabase sharedDatabase] getModelAsArray:@"Place"];
         [[self tableView] reloadData];
-        [HUD hide:YES];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 //        [self.view setNeedsDisplay];
     }
 }
@@ -48,14 +50,25 @@
                                                object:nil];
 
     self.navigationItem.title = @"Salas";
-    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-	[self.navigationController.view addSubview:HUD];
-	  
-	HUD.delegate = self;
-	HUD.labelText = @"Actualizando";
-	HUD.minSize = CGSizeMake(135.f, 135.f);
     
-    [HUD show:YES];
+    NSArray *places = [[IGDatabase sharedDatabase] getModelAsArray:@"Place"];
+    
+    if (!places || [places count] <= 0) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    } else {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    }
+
+    
+    
+//    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+//	[self.navigationController.view addSubview:HUD];
+//	  
+//	HUD.delegate = self;
+//	HUD.labelText = @"Actualizando";
+//	HUD.minSize = CGSizeMake(135.f, 135.f);
+//    
+//    [HUD show:YES];
     
     ODRefreshControl *refreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
     [refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];

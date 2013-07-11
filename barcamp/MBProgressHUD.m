@@ -69,7 +69,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @synthesize animationType;
 @synthesize delegate;
 @synthesize opacity;
-@synthesize color;
 @synthesize labelFont;
 @synthesize detailsLabelFont;
 @synthesize indicator;
@@ -92,9 +91,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @synthesize detailsLabelText;
 @synthesize progress;
 @synthesize size;
-#if NS_BLOCKS_AVAILABLE
-@synthesize completionBlock;
-#endif
 
 #pragma mark - Class methods
 
@@ -128,9 +124,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	MBProgressHUD *hud = nil;
 	NSArray *subviews = view.subviews;
 	Class hudClass = [MBProgressHUD class];
-	for (UIView *aView in subviews) {
-		if ([aView isKindOfClass:hudClass]) {
-			hud = (MBProgressHUD *)aView;
+	for (UIView *view in subviews) {
+		if ([view isKindOfClass:hudClass]) {
+			hud = (MBProgressHUD *)view;
 		}
 	}
 	return hud;
@@ -140,9 +136,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	NSMutableArray *huds = [NSMutableArray array];
 	NSArray *subviews = view.subviews;
 	Class hudClass = [MBProgressHUD class];
-	for (UIView *aView in subviews) {
-		if ([aView isKindOfClass:hudClass]) {
-			[huds addObject:aView];
+	for (UIView *view in subviews) {
+		if ([view isKindOfClass:hudClass]) {
+			[huds addObject:view];
 		}
 	}
 	return [NSArray arrayWithArray:huds];
@@ -159,7 +155,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		self.labelText = nil;
 		self.detailsLabelText = nil;
 		self.opacity = 0.8f;
-        self.color = nil;
 		self.labelFont = [UIFont boldSystemFontOfSize:kLabelFontSize];
 		self.detailsLabelFont = [UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
 		self.xOffset = 0.0f;
@@ -218,9 +213,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	[minShowTimer release];
 	[showStarted release];
 	[customView release];
-#if NS_BLOCKS_AVAILABLE
-	[completionBlock release];
-#endif
 	[super dealloc];
 #endif
 }
@@ -333,13 +325,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	self.alpha = 0.0f;
 	if ([delegate respondsToSelector:@selector(hudWasHidden:)]) {
 		[delegate performSelector:@selector(hudWasHidden:) withObject:self];
-	}
-#if NS_BLOCKS_AVAILABLE
-	if (self.completionBlock) {
-		self.completionBlock();
-		self.completionBlock = NULL;
-	}
-#endif
+	} 
 	if (removeFromSuperViewOnHide) {
 		[self removeFromSuperview];
 	}
@@ -357,37 +343,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	// Show HUD view
 	[self show:animated];
 }
-
-#if NS_BLOCKS_AVAILABLE
-
-- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block {
-	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-	[self showAnimated:animated whileExecutingBlock:block onQueue:queue completionBlock:NULL];
-}
-
-- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(void (^)())completion {
-	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-	[self showAnimated:animated whileExecutingBlock:block onQueue:queue completionBlock:completion];
-}
-
-- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue {
-	[self showAnimated:animated whileExecutingBlock:block onQueue:queue	completionBlock:NULL];
-}
-
-- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue
-	 completionBlock:(MBProgressHUDCompletionBlock)completion {
-	
-	self.completionBlock = completion;
-	dispatch_async(queue, ^(void) {
-        block();
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
-            [self cleanUp];
-        });
-    });
-    [self show:animated];
-}
-
-#endif
 
 - (void)launchExecution {
 	@autoreleasepool {
@@ -477,11 +432,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 
 - (void)layoutSubviews {
 	
-	// Entirely cover the parent view
-	UIView *parent = self.superview;
-	if (parent) {
-		self.frame = parent.bounds;
-	}
 	CGRect bounds = self.bounds;
 	
 	// Determine the total widt and height needed
@@ -567,7 +517,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
-	if (self.dimBackground) {
+	if (dimBackground) {
 		//Gradient colours
 		size_t gradLocationsNum = 2;
 		CGFloat gradLocations[2] = {0.0f, 1.0f};
@@ -585,22 +535,15 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 									 kCGGradientDrawsAfterEndLocation);
 		CGGradientRelease(gradient);
 	}
-
-    // Set background rect color
-    if(self.color){
-        CGContextSetFillColorWithColor(context, self.color); 
-    } else {
-        CGContextSetGrayFillColor(context, 0.0f, self.opacity);
-    }
-
 	
 	// Center HUD
 	CGRect allRect = self.bounds;
-	// Draw rounded HUD backgroud rect
+	// Draw rounded HUD bacgroud rect
 	CGRect boxRect = CGRectMake(roundf((allRect.size.width - size.width) / 2) + self.xOffset,
 								roundf((allRect.size.height - size.height) / 2) + self.yOffset, size.width, size.height);
 	float radius = 10.0f;
 	CGContextBeginPath(context);
+	CGContextSetGrayFillColor(context, 0.0f, self.opacity);
 	CGContextMoveToPoint(context, CGRectGetMinX(boxRect) + radius, CGRectGetMinY(boxRect));
 	CGContextAddArc(context, CGRectGetMaxX(boxRect) - radius, CGRectGetMinY(boxRect) + radius, radius, 3 * (float)M_PI / 2, 0, 0);
 	CGContextAddArc(context, CGRectGetMaxX(boxRect) - radius, CGRectGetMaxY(boxRect) - radius, radius, 0, (float)M_PI / 2, 0);

@@ -139,7 +139,7 @@
     localNotif.applicationIconBadgeNumber = 1;
     
 	// Specify custom data for the notification
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"someValue" forKey:@"someKey"];
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:selUnconference.identifier forKey:@"idUnconference"];
     localNotif.userInfo = infoDict;
     
 	// Schedule the notification
@@ -168,15 +168,11 @@
     
     switch (buttonIndex) {
         case 0: 
-        {       
             NSLog(@"No agregó");
-        }
             break;
             
         case 1: 
-        {
             [self programarNotificacion];
-        }
             break;
     }
 }

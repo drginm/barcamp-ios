@@ -60,14 +60,20 @@
     [[IGBackend sharedBackend] updateTwitts];
     
     
-    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-	[self.navigationController.view addSubview:HUD];
-	
-	HUD.delegate = self;
-	HUD.labelText = @"Actualizando";
-	HUD.minSize = CGSizeMake(135.f, 135.f);
+    if (!twitterEntries || ![twitterEntries count]) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    } else {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    }
     
-    [HUD show:YES];
+//    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+//	[self.navigationController.view addSubview:HUD];
+//	
+//	HUD.delegate = self;
+//	HUD.labelText = @"Actualizando";
+//	HUD.minSize = CGSizeMake(135.f, 135.f);
+//    
+//    [HUD show:YES];
 	
 
 }
@@ -81,7 +87,8 @@
     if([[notification name] isEqualToString:@"updateTwitts"]){
         twitterEntries = [[notification userInfo] arrayForKey:TWITTS_KEY];
         [[self tableView] reloadData];
-        [HUD hide:YES];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         [self.view setNeedsDisplay];
     }
 }

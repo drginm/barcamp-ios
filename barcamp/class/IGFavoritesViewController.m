@@ -7,8 +7,14 @@
 //
 
 #import "IGFavoritesViewController.h"
+#import "IGDatabase.h"
+#import "Unconference.h"
+#import "IGDetailViewController.h"
 
 @interface IGFavoritesViewController ()
+
+@property (nonatomic, strong) IGDetailViewController *detailVC;
+@property (nonatomic, strong) Unconference *unconference;
 
 @end
 
@@ -143,13 +149,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    // Get list of local notifications
+    NSArray *notificationArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    UILocalNotification *notif = [notificationArray objectAtIndex:indexPath.row];
+    
+    NSDictionary *userInfo = [notif userInfo];
+    
+    self.unconference = [[IGDatabase sharedDatabase] getObjectFromModel:@"Unconference" WithId:[userInfo objectForKey:@"idUnconference"]];
+    
+    [self performSegueWithIdentifier:@"unconferenceDetailSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"unconferenceDetailSegue"]){
+        self.detailVC = [segue destinationViewController];
+        [self.detailVC setSelUnconference:self.unconference];
+    }
 }
 
 @end
