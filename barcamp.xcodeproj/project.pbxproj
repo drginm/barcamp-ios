@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		087F531B15BB9BDC00BDB19A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 087F531915BB9AE300BDB19A /* MBProgressHUD.m */; };
+		250FA439178EF1770041EDF0 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 250FA438178EF1770041EDF0 /* Place.m */; };
+		250FA440178EF59E0041EDF0 /* Unconference.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33F115B8AF3A004064D9 /* Unconference.m */; };
 		255CD1751768BA0A0033DAD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */; };
 		255CD1771768BA240033DAD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255CD1761768BA240033DAD5 /* Default-568h@2x.png */; };
 		259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33A915B89835004064D9 /* UIKit.framework */; };
@@ -21,12 +23,10 @@
 		259B33E615B8A681004064D9 /* IGBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33E515B8A681004064D9 /* IGBackend.m */; };
 		259B33E915B8AA15004064D9 /* IGDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33E815B8AA15004064D9 /* IGDatabase.m */; };
 		259B33EC15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 259B33EA15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld */; };
-		259B33F215B8AF3A004064D9 /* Unconference.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33F115B8AF3A004064D9 /* Unconference.m */; };
 		259B33FD15B8B436004064D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33FC15B8B436004064D9 /* Default.png */; };
 		259B33FF15B8B43A004064D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B33FE15B8B43A004064D9 /* Default@2x.png */; };
 		259B340315B8B56A004064D9 /* DictionaryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B340215B8B54D004064D9 /* DictionaryHelper.m */; };
 		259B340515B8B620004064D9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B340415B8B620004064D9 /* CoreData.framework */; };
-		259B340915B8B772004064D9 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B340815B8B772004064D9 /* Place.m */; };
 		259B341815B8C45D004064D9 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B340E15B8C45C004064D9 /* Icon-72.png */; };
 		259B341915B8C45D004064D9 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B340F15B8C45C004064D9 /* Icon-72@2x.png */; };
 		259B341A15B8C45D004064D9 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B341015B8C45C004064D9 /* Icon-Small-50.png */; };
@@ -71,6 +71,9 @@
 /* Begin PBXFileReference section */
 		087F531815BB9AE300BDB19A /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		087F531915BB9AE300BDB19A /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		250FA436178EF0FF0041EDF0 /* IGBarcampModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = IGBarcampModel2.xcdatamodel; sourceTree = "<group>"; };
+		250FA437178EF1770041EDF0 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		250FA438178EF1770041EDF0 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		255CD1761768BA240033DAD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		259B33A515B89835004064D9 /* barcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +102,6 @@
 		259B340115B8B54D004064D9 /* DictionaryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryHelper.h; sourceTree = "<group>"; };
 		259B340215B8B54D004064D9 /* DictionaryHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryHelper.m; sourceTree = "<group>"; };
 		259B340415B8B620004064D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		259B340715B8B772004064D9 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
-		259B340815B8B772004064D9 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		259B340E15B8C45C004064D9 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		259B340F15B8C45C004064D9 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		259B341015B8C45C004064D9 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -305,9 +306,9 @@
 		259B340615B8B74B004064D9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				250FA437178EF1770041EDF0 /* Place.h */,
+				250FA438178EF1770041EDF0 /* Place.m */,
 				259B33EA15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld */,
-				259B340715B8B772004064D9 /* Place.h */,
-				259B340815B8B772004064D9 /* Place.m */,
 				259B33F115B8AF3A004064D9 /* Unconference.m */,
 				259B33F015B8AF3A004064D9 /* Unconference.h */,
 			);
@@ -420,14 +421,14 @@
 				259B33E615B8A681004064D9 /* IGBackend.m in Sources */,
 				259B33E915B8AA15004064D9 /* IGDatabase.m in Sources */,
 				259B33EC15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld in Sources */,
-				259B33F215B8AF3A004064D9 /* Unconference.m in Sources */,
-				259B340915B8B772004064D9 /* Place.m in Sources */,
 				259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */,
 				259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */,
 				259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */,
 				259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */,
 				46AF655115BC3072000A2F02 /* AboutViewController.m in Sources */,
 				46D2462015BC9670006CFB99 /* IGFavoritesViewController.m in Sources */,
+				250FA440178EF59E0041EDF0 /* Unconference.m in Sources */,
+				250FA439178EF1770041EDF0 /* Place.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,9 +548,10 @@
 		259B33EA15B8AA41004064D9 /* IGBarcampModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				250FA436178EF0FF0041EDF0 /* IGBarcampModel2.xcdatamodel */,
 				259B33EB15B8AA41004064D9 /* IGBarcampModel.xcdatamodel */,
 			);
-			currentVersion = 259B33EB15B8AA41004064D9 /* IGBarcampModel.xcdatamodel */;
+			currentVersion = 250FA436178EF0FF0041EDF0 /* IGBarcampModel2.xcdatamodel */;
 			path = IGBarcampModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

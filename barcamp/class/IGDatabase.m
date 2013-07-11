@@ -178,6 +178,7 @@
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
             unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
             unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
+            unconference.schedule_id = [horario numberForKey:@"id"];
             
             
             unconference.schedule = [NSString stringWithFormat:@"%@ - %@", [hourFormatter stringFromDate:unconference.start_time], [hourFormatter stringFromDate:unconference.end_time]];
@@ -188,7 +189,7 @@
 //            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
             
             if (place != nil) {
-                unconference.place = place;
+                unconference.place_id = place.identifier;
             }
             
 //            [context save:&error];
@@ -207,13 +208,14 @@
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
             unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
             unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
+            unconference.schedule_id = [horario numberForKey:@"id"];
             
             unconference.schedule = [NSString stringWithFormat:@"%@ - %@", [hourFormatter stringFromDate:unconference.start_time], [hourFormatter stringFromDate:unconference.end_time]];
             
 //            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
             
             if (place != nil) {
-                unconference.place = place;
+                unconference.place_id = place.identifier;
             }
 //            [context save:&error];
     
@@ -273,14 +275,15 @@
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
             unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
             unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
+            unconference.schedule_id = [horario numberForKey:@"id"];
             
             
-            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
+//            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
             
-            if (place != nil) {
-                unconference.place = place;
-            }
-                        
+//            if (place != nil) {
+                unconference.place_id = [unconferenceDict objectForKey:@"Place"];
+//            }
+            
             
             [context save:&error];
         } else {
@@ -297,12 +300,10 @@
             NSDictionary *horario = [unconferenceDict objectForKey: @"horario"];
             unconference.start_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaInicio"]];
             unconference.end_time = [dateFormatter dateFromString:[horario stringForKey:@"fechaFin"]];
+            unconference.schedule_id = [horario numberForKey:@"id"];
             
-            Place *place = [self getObjectFromModel:@"Place" WithId:[unconferenceDict objectForKey:@"Place"]];
-            
-            if (place != nil) {
-                unconference.place = place;
-            }
+            unconference.place_id = [unconferenceDict objectForKey:@"Place"];
+
             
             [context save:&error];
         }
@@ -330,10 +331,10 @@
 
 
 - (NSArray *)getUnconfForPlace:(Place *) place{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@", place];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place_id == %@", place.identifier];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey:@"schedule_id"     
+                                        initWithKey:@"start_time"     
                                         ascending:YES];
     NSArray *descriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
@@ -345,11 +346,18 @@
 - (Unconference *)getNextUnconferenceForPlace:(Place *) place{
 
     NSDate *now = [NSDate date];
+
+//For testing only
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+//    
+//    NSDate *now = [dateFormatter dateFromString:@"2012-07-28T10:00:00"];
+    
     Unconference *nextUnconf;
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place == %@ AND start_time >= %@", place, now];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY place_id == %@ AND (start_time >= %@)", place.identifier, now];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey:@"schedule_id"     
+                                        initWithKey:@"start_time"     
                                         ascending:YES];
     NSArray *descriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
@@ -360,6 +368,26 @@
         nextUnconf = (Unconference *)[unconfsForPlace objectAtIndex:0];
     }
     return nextUnconf;
+}
+
+- (void) deleteAllObjects: (NSString *) entityDescription  {
+    NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
+
+    
+    for (NSManagedObject *managedObject in items) {
+    	[context deleteObject:managedObject];
+    	NSLog(@"%@ object deleted",entityDescription);
+    }
+    if (![context save:&error]) {
+    	NSLog(@"Error deleting %@ - error:%@",entityDescription,error);
+    }
+    
 }
 
 @end

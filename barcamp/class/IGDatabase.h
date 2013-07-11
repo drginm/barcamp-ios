@@ -23,4 +23,6 @@
 -(void)updateLocalUnconferences:(NSArray *)unconferences;
 - (NSArray *)getUnconfForPlace:(Place *) place;
 - (Unconference *)getNextUnconferenceForPlace:(Place *) place;
+- (void) deleteAllObjects: (NSString *) entityDescription;
+
 @end

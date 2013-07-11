@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IGBackend.h"
+#import "IGDatabase.h"
 
 @implementation AppDelegate
 
@@ -23,8 +24,22 @@ NSString *kNotificationTextKey = @"kNotificationTextKey";
 {
     // Override point for customization after application launch.
     
-    [[IGBackend sharedBackend] updatePlaces];
+    
 //    [[IGBackend sharedBackend] updateUnconferences];
+    
+    
+    NSString* barcampVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"barcampVersion"];
+    
+    if (!barcampVersion || ![barcampVersion isEqualToString:@"2.0"]) {
+        [self clearStore];
+    }
+    
+    NSString * appVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    [[NSUserDefaults standardUserDefaults] setObject:appVersionString forKey:@"barcampVersion"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    [[IGBackend sharedBackend] updatePlaces];
     
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor darkGrayColor],
@@ -119,11 +134,17 @@ NSString *kNotificationTextKey = @"kNotificationTextKey";
         return __persistentStoreCoordinator;
     }
     
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             
+                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+                             
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+    
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"IGBarcampModel.sqlite"];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          
@@ -153,6 +174,32 @@ NSString *kNotificationTextKey = @"kNotificationTextKey";
     
     return __persistentStoreCoordinator;
 }
+
+-(void)clearStore{
+    [[IGDatabase sharedDatabase] deleteAllObjects:@"Unconference"];
+    [[IGDatabase sharedDatabase] deleteAllObjects:@"Place"];
+    
+    //    NSError * error;
+//    // retrieve the store URL
+////    NSURL * storeURL = [[__managedObjectContext persistentStoreCoordinator] URLForPersistentStore:[[[__managedObjectContext persistentStoreCoordinator] persistentStores] lastObject]];
+//    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"IGBarcampModel.sqlite"];
+//    // lock the current context
+//    [__managedObjectContext lock];
+//    [__managedObjectContext reset];//to drop pending changes
+//    //delete the store from the current managedObjectContext
+//    if ([[__managedObjectContext persistentStoreCoordinator] removePersistentStore:[[[__managedObjectContext persistentStoreCoordinator] persistentStores] lastObject] error:&error])
+//    {
+//        // remove the file containing the data
+//        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
+//        //recreate the store like in the  appDelegate method
+//        [[__managedObjectContext persistentStoreCoordinator] addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];//recreates the persistent store
+//    }
+//    [__managedObjectContext unlock];
+//    //that's it !
+}
+
+
+
 
 #pragma mark - Application's Documents directory
 
