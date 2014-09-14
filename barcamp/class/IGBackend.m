@@ -101,39 +101,4 @@
     dispatch_release(cola);
 }
 
-#pragma mark - Twitts
-- (void)updateTwitts{
-    
-    __block NSString *jsonResult = nil;
-    
-    dispatch_queue_t cola = dispatch_queue_create("services", NULL);
-    dispatch_async(cola, ^{
-        NSString *url = [NSString stringWithFormat:@"%@", API_TWITTER_QUERY];        
-        jsonResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:url] encoding:NSUTF8StringEncoding error:nil];
-        
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-            NSError *error;
-            NSData *dataJson = [jsonResult dataUsingEncoding:NSUTF8StringEncoding];
-            
-            NSDictionary *entries;
-            if(dataJson){
-                entries = [NSJSONSerialization JSONObjectWithData: dataJson options: NSJSONReadingMutableContainers error:&error];
-            }
-            
-            if (entries) {
-                
-                
-                NSDictionary *twitts = [NSDictionary dictionaryWithObject:[[[entries dictionaryForKey:@"responseData"] dictionaryForKey:@"feed"] arrayForKey:@"entries"]   forKey:TWITTS_KEY];
-                [[NSNotificationCenter defaultCenter] 
-                 postNotificationName:@"updateTwitts" 
-                 object:self userInfo:twitts];
-            }
-        });
-    });
-    
-    dispatch_release(cola);
-}
-
-
 @end

@@ -11,7 +11,6 @@
 		250FA439178EF1770041EDF0 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 250FA438178EF1770041EDF0 /* Place.m */; };
 		250FA440178EF59E0041EDF0 /* Unconference.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B33F115B8AF3A004064D9 /* Unconference.m */; };
 		255CD1751768BA0A0033DAD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */; };
-		255CD1771768BA240033DAD5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255CD1761768BA240033DAD5 /* Default-568h@2x.png */; };
 		259B33AA15B89835004064D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33A915B89835004064D9 /* UIKit.framework */; };
 		259B33AC15B89835004064D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AB15B89835004064D9 /* Foundation.framework */; };
 		259B33AE15B89835004064D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B33AD15B89835004064D9 /* CoreGraphics.framework */; };
@@ -43,7 +42,6 @@
 		259B343B15BB1402004064D9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B343A15BB1402004064D9 /* Twitter.framework */; };
 		259B343E15BB1781004064D9 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B343C15BB1781004064D9 /* twitter@2x.png */; };
 		259B343F15BB1781004064D9 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 259B343D15BB1781004064D9 /* twitter.png */; };
-		259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344115BB1E03004064D9 /* TwitterViewController.m */; };
 		259B344A15BB2023004064D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B344915BB2023004064D9 /* QuartzCore.framework */; };
 		259B344B15BB2956004064D9 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B344815BB1FBD004064D9 /* ODRefreshControl.m */; };
 		46A5ED0A15BB99D70010DF50 /* 7-bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A5ED0815BB99D70010DF50 /* 7-bell.png */; };
@@ -71,7 +69,7 @@
 /* Begin PBXFileReference section */
 		087F531815BB9AE300BDB19A /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		087F531915BB9AE300BDB19A /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		250FA436178EF0FF0041EDF0 /* IGBarcampModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = IGBarcampModel2.xcdatamodel; sourceTree = "<group>"; };
+		250FA436178EF0FF0041EDF0 /* IGBarcampModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IGBarcampModel2.xcdatamodel; sourceTree = "<group>"; };
 		250FA437178EF1770041EDF0 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		250FA438178EF1770041EDF0 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		255CD1741768BA0A0033DAD5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -121,8 +119,6 @@
 		259B343A15BB1402004064D9 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		259B343C15BB1781004064D9 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 		259B343D15BB1781004064D9 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
-		259B344015BB1E03004064D9 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterViewController.h; path = class/TwitterViewController.h; sourceTree = "<group>"; };
-		259B344115BB1E03004064D9 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterViewController.m; path = class/TwitterViewController.m; sourceTree = "<group>"; };
 		259B344715BB1FBD004064D9 /* ODRefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		259B344815BB1FBD004064D9 /* ODRefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 		259B344915BB2023004064D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -236,8 +232,6 @@
 				259B33E515B8A681004064D9 /* IGBackend.m */,
 				259B33E715B8AA15004064D9 /* IGDatabase.h */,
 				259B33E815B8AA15004064D9 /* IGDatabase.m */,
-				259B344015BB1E03004064D9 /* TwitterViewController.h */,
-				259B344115BB1E03004064D9 /* TwitterViewController.m */,
 			);
 			path = barcamp;
 			sourceTree = "<group>";
@@ -341,7 +335,7 @@
 		259B339C15B89834004064D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = IGApps;
 			};
 			buildConfigurationList = 259B339F15B89834004064D9 /* Build configuration list for PBXProject "barcamp" */;
@@ -401,7 +395,6 @@
 				46AF655915BC3B35000A2F02 /* about_texto.png in Resources */,
 				46AF655A15BC3B35000A2F02 /* about_texto@2x.png in Resources */,
 				255CD1751768BA0A0033DAD5 /* Default-568h@2x.png in Resources */,
-				255CD1771768BA240033DAD5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +417,6 @@
 				259B342A15B8C86B004064D9 /* IGUnconferencesViewController.m in Sources */,
 				259B342D15BAF4FA004064D9 /* IGDetailViewController.m in Sources */,
 				259B343515BB1169004064D9 /* UILabel+ESAdjustableLabel.m in Sources */,
-				259B344215BB1E03004064D9 /* TwitterViewController.m in Sources */,
 				46AF655115BC3072000A2F02 /* AboutViewController.m in Sources */,
 				46D2462015BC9670006CFB99 /* IGFavoritesViewController.m in Sources */,
 				250FA440178EF59E0041EDF0 /* Unconference.m in Sources */,
@@ -458,8 +450,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -471,10 +468,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -483,14 +484,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

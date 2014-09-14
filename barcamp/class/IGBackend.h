@@ -15,5 +15,4 @@
 
 - (void)updatePlaces;
 - (void)updateUnconferences;
-- (void)updateTwitts;
 @end
