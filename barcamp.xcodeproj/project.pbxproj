@@ -337,6 +337,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = IGApps;
+				TargetAttributes = {
+					259B33A415B89835004064D9 = {
+						DevelopmentTeam = 6T52A4925V;
+					};
+				};
 			};
 			buildConfigurationList = 259B339F15B89834004064D9 /* Build configuration list for PBXProject "barcamp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -511,6 +516,7 @@
 		259B33CF15B89836004064D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "barcamp/barcamp-Prefix.pch";
 				INFOPLIST_FILE = "barcamp/barcamp-Info.plist";
@@ -522,6 +528,7 @@
 		259B33D015B89836004064D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "barcamp/barcamp-Prefix.pch";
 				INFOPLIST_FILE = "barcamp/barcamp-Info.plist";
