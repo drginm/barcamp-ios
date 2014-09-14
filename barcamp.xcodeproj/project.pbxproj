@@ -64,6 +64,7 @@
 		46BA367F15BAF5ED0058F9BB /* 6-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367315BAF5ED0058F9BB /* 6-heart.png */; };
 		46BA368015BAF5ED0058F9BB /* 6-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */; };
 		46D2462015BC9670006CFB99 /* IGFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D2461F15BC966F006CFB99 /* IGFavoritesViewController.m */; };
+		F573B69C19C644E50073C7CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F573B69B19C644E50073C7CC /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		46BA367415BAF5ED0058F9BB /* 6-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6-heart@2x.png"; sourceTree = "<group>"; };
 		46D2461E15BC966F006CFB99 /* IGFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGFavoritesViewController.h; path = class/IGFavoritesViewController.h; sourceTree = "<group>"; };
 		46D2461F15BC966F006CFB99 /* IGFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGFavoritesViewController.m; path = class/IGFavoritesViewController.m; sourceTree = "<group>"; };
+		F573B69B19C644E50073C7CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				259B33E515B8A681004064D9 /* IGBackend.m */,
 				259B33E715B8AA15004064D9 /* IGDatabase.h */,
 				259B33E815B8AA15004064D9 /* IGDatabase.m */,
+				F573B69B19C644E50073C7CC /* Images.xcassets */,
 			);
 			path = barcamp;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				259B341A15B8C45D004064D9 /* Icon-Small-50.png in Resources */,
 				259B341B15B8C45D004064D9 /* Icon-Small-50@2x.png in Resources */,
 				259B341C15B8C45D004064D9 /* Icon-Small.png in Resources */,
+				F573B69C19C644E50073C7CC /* Images.xcassets in Resources */,
 				259B341D15B8C45D004064D9 /* iTunesArtwork.png in Resources */,
 				259B341E15B8C45D004064D9 /* Icon-Small@2x.png in Resources */,
 				259B341F15B8C45D004064D9 /* Icon.png in Resources */,
@@ -516,6 +520,8 @@
 		259B33CF15B89836004064D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "barcamp/barcamp-Prefix.pch";
@@ -528,6 +534,8 @@
 		259B33D015B89836004064D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "barcamp/barcamp-Prefix.pch";

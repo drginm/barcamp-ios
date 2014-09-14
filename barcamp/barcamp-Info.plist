@@ -9,20 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>Default.png</string>
-				<string>Default@2x.png</string>
-				<string>Icon.png</string>
-				<string>Icon@2x.png</string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>com.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -56,11 +45,11 @@
 			<key>TintColor</key>
 			<dict>
 				<key>Blue</key>
-				<real>0.8732542395591736</real>
+				<real>0.87325423955917358</real>
 				<key>Green</key>
-				<real>0.8732393980026245</real>
+				<real>0.87323939800262451</real>
 				<key>Red</key>
-				<real>0.8732655644416809</real>
+				<real>0.87326556444168091</real>
 			</dict>
 			<key>Translucent</key>
 			<false/>
