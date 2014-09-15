@@ -66,7 +66,7 @@
         });
     });
     
-    dispatch_release(cola);
+    //dispatch_release(cola);
 }
 
 
@@ -98,7 +98,7 @@
         });
     });
     
-    dispatch_release(cola);
+    //dispatch_release(cola);
 }
 
 @end
