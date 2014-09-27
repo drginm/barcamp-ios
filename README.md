@@ -1,6 +1,6 @@
 Barcamp
 =======
 
-App for the Barcamp Medellín
+App for the Barcamp Medellín (Download from them [appstore](https://itunes.apple.com/us/app/barcamp-medellin/id918993565))
 
 Forked from https://github.com/intergrupo/Barcamp App created by IG in 2013
